@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#a7dbd8',
+    backgroundColor: '#87ceeb',
     padding: 8,
     
   },

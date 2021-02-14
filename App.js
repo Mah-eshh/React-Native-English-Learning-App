@@ -1,10 +1,6 @@
 import React from "react";
 import { StyleSheet, Platform, Image, Text, View } from "react-native";
-import {
-  createSwitchNavigator,
-  createStackNavigator,
-  createAppContainer
-} from "react-navigation";
+import { createSwitchNavigator, createStackNavigator, createAppContainer } from "react-navigation";
 
 import * as firebase from "firebase";
 var firebaseConfig = {
@@ -24,7 +20,6 @@ firebase.initializeApp(firebaseConfig);
 import Loading from "./components/Loading";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-
 import AppMain from "./AppMain";
 import google from "./components/google";
 import Otp from "./components/Phone/Otp";

@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import MainTabScreen from './screens/MainTabScreen'; 
 import SupportScreen from './screens/SupportScreen';
 
+
 import  GMScreen from './screens/GMScreen';
 
 // import  DicScreen from './Dictionary/DicScreen';
@@ -25,7 +26,7 @@ import SpeakingPractice from './timer/SpeakingPractice';
 // import myShare from './screens/myShare';
 import WebBrowserScreen from './drawer/web/WebBrowserScreen';
 import PDFScreen from './drawer/web/PDFScreen';
-
+import ProfileScreen from './screens/ProfileScreen';
 import * as firebase from "firebase";
 const Drawer = createDrawerNavigator();
 
@@ -53,6 +54,7 @@ const AppMain = () => {
            {/* <Drawer.Screen name="myShare" component={myShare}/> */}
              <Drawer.Screen name="WebBrowserScreen" component={WebBrowserScreen}/>
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
+              <Drawer.Screen name="ProfileScreen" component={ProfileScreen}/>
          
           
           

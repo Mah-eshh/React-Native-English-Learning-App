@@ -8,15 +8,13 @@ const audioBookPlaylist = [
 		title: 'Alone',
 		author: 'Alan Walker',
 		source: 'Listening Practice',
-		uri:
-			'https://firebasestorage.googleapis.com/v0/b/zinc-fusion-302607.appspot.com/o/mp3%2Falan-walker-alone.mp3?alt=media&token=a93dffd2-af08-4abc-b3e3-34ff0cb49409',
+		uri: 'https://firebasestorage.googleapis.com/v0/b/zinc-fusion-302607.appspot.com/o/mp3%2Falan-walker-alone.mp3?alt=media&token=a93dffd2-af08-4abc-b3e3-34ff0cb49409',
 			},
 	{
 		title: 'My Heart Will Go On',
 		author: 'Titanic',
 		source: 'Listening Practice',
-		uri:
-			'https://firebasestorage.googleapis.com/v0/b/zinc-fusion-302607.appspot.com/o/Titanic-My-Heart-Will-Go-On-GrandBD-Tk-(grandbd.wapkiz.com).mp3?alt=media&token=31f548d9-a410-4d37-ba4d-192870e0e47d',
+		uri: 'https://firebasestorage.googleapis.com/v0/b/zinc-fusion-302607.appspot.com/o/Titanic-My-Heart-Will-Go-On-GrandBD-Tk-(grandbd.wapkiz.com).mp3?alt=media&token=31f548d9-a410-4d37-ba4d-192870e0e47d',
 	},
 	{
 		title: 'Sacrifice',

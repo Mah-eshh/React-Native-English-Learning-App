@@ -28,11 +28,6 @@ const audioBookPlaylist = [{
         staysActiveInBackground: true,
         playThroughEarpieceAndroid: false
       });
-  //     async componentWillUnmount() {
-  //   const { playbackInstance } = this.state;
-  //   await playbackInstance.pauseAsync();
-  // }
-
       this.loadAudio();
     } catch (e) {
       console.log(e);
@@ -95,10 +90,13 @@ const audioBookPlaylist = [{
       />
      
        <Button
-        title="live Fm"
+        title="live"
         color="#f41258ff"
       />
-      
+      <Button
+        title="The best method in English"
+        color="#5258"></Button>
+
         <TouchableOpacity onPress={this.handlePlayPause}>
           <Buttons>
             {this.state.isPlaying ? (
@@ -118,16 +116,16 @@ const audioBookPlaylist = [{
 }
 
 const PlayButtonContainer = styled.View`
-  width: 450;
+  width: 420;
   height: 200;
-  background-color: #224c87;
+  background-color: #00008b;
   text-align: center;
   justify-content: center;
   flex: 1;
 `;
 
 const Buttons = styled.Text`
-  width: 420px;
+  width: 395px;
   height: 64px;
   top: 15px;
   left: 13px;

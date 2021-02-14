@@ -16,4 +16,4 @@ const ShareScreen = () => {
       }
     };
 
-export default ShareScreen;
+export default ShareScreen; 
