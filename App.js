@@ -17,7 +17,7 @@ var firebaseConfig = {
     appId: "1:215197510308:web:d17f60de74b890e9769431"
 
 };
-// Initialize Firebase
+// Initialize Firebase mahesh 
 firebase.initializeApp(firebaseConfig);
 
 // import the different screens
