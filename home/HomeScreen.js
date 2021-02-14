@@ -21,7 +21,7 @@ export default class HomeScreen extends React.Component {
           content="maheSH" 
           textStyle={styles.textStyle}
           style={styles.containerStyle}
-          timing={5555}
+          timing={6000}
           onFinish={ this._onFinish }
           
         />
