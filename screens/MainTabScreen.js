@@ -74,7 +74,6 @@ const MainTabScreen = () => (
           ),
         }}
       />
-
       <Tab.Screen
         name="mahesh"
         component={SpeakingStackPractice}
