@@ -11,10 +11,17 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <StatusBar hidden/>
         <TextAnimator 
-          content="Your are welcome to smart English App @_mahesh.  " 
+          content="Your are welcome to smart English App " 
           textStyle={styles.textStyle}
           style={styles.containerStyle}
           timing={500}
+          onFinish={ this._onFinish }
+        />
+         <TextAnimator 
+          content="maheSH" 
+          textStyle={styles.textStyle}
+          style={styles.containerStyle}
+          timing={5555}
           onFinish={ this._onFinish }
           
         />
@@ -25,7 +32,7 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     justifyContent: 'space-around',
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#87ceeb',
@@ -35,8 +42,7 @@ const styles = StyleSheet.create({
   containerStyle: {},
   textStyle: {
     fontSize: 40,
-    fontWeight: '400',
-    
+    color: '#191970', 
     marginBottom: 14
   },
 });
