@@ -91,6 +91,7 @@ export function DrawerContent(props) {
                             label="Abeykoon"
                             onPress={() => {props.navigation.navigate('AbeykoonScreen')}}
                         /> */}
+                        
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <MaterialIcons name="import-contacts" size={30} color="black" />
@@ -99,14 +100,14 @@ export function DrawerContent(props) {
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                       
-                        {/* <DrawerItem 
+                        <DrawerItem 
                             icon={({color, size}) => (
                              <Entypo name="music" size={30} color="black" />
                             
                             )}
                             label="English Songs"
                             onPress={() => {props.navigation.navigate('MusicsScreen')}}
-                        /> */}
+                        />
                         <DrawerItem 
                             icon={({color, size}) => (
                               <FontAwesome5 name="headphones" size={30} color="black" />
@@ -132,7 +133,7 @@ export function DrawerContent(props) {
                         />
                          <DrawerItem 
                             icon={({color, size}) => (
-                              <Entypo name="time-slot" size={30} color="#663399" />
+                              <Entypo name="time-slot" size={30} color="black" />
                             )}
                             label="Speak with your self "
                             onPress={() => {props.navigation.navigate('SpeakingPractice')}}

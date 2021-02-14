@@ -44,7 +44,6 @@ const audioBookPlaylist = [
 		uri:
 			'https://firebasestorage.googleapis.com/v0/b/zinc-fusion-302607.appspot.com/o/mp3%2Flet-me-love-you.mp3?alt=media&token=d6baa5ea-4375-4f32-816f-a0bd27863ae7',	}
 ]
-
 export default class  MusicsScreen extends React.Component {
 	state = {
 		isPlaying: false,
@@ -53,7 +52,6 @@ export default class  MusicsScreen extends React.Component {
 		volume: 1.0,
 		isBuffering: true
 	}
-
 	async componentDidMount() {
 		try {
 			await Audio.setAudioModeAsync({
@@ -85,7 +83,6 @@ export default class  MusicsScreen extends React.Component {
 				shouldPlay: isPlaying,
 				volume: volume
 			}
-
 			playbackInstance.setOnPlaybackStatusUpdate(this.onPlaybackStatusUpdate)
 			await playbackInstance.loadAsync(source, status, false)
 			this.setState({

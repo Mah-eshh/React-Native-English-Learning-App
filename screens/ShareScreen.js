@@ -6,7 +6,7 @@ const ShareScreen = () => {
  
   const myCustomShare = async (){
     const shareOptions = {
-      message: 'This a mmds',
+      message: 'This a message',
     }
       try {
         const shareOptions = await Share.open(shareOptions);
@@ -15,6 +15,5 @@ const ShareScreen = () => {
 
       }
     };
-
     
 export default ShareScreen; 

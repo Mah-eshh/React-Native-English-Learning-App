@@ -18,7 +18,7 @@ export default [
     category: 'I really appreciate…',
     subCategories: ['   You can also use this phrase to thank someone. For example, you might say:',
     '   I really appreciate your help.',
-    '   Or you can combine #1 and #2: ' ,
+    '   Or you can combine #1 and #2: ',
     '   Thanks so much for cooking dinner. I really appreciate it.',
     '   Thanks so much. I really appreciate you cooking dinner.',
     ],
@@ -42,7 +42,7 @@ export default [
     category: 'I’m sorry',
     subCategories: ['   Use this phrase to apologize, whether for something big or small. ',
     '   Use “for” to give more detail. For example:',
-    '   I’m sorry for being so late.' ,
+    '   I’m sorry for being so late.',
     '   I’m sorry for the mess. I wasn’t expecting anyone today.',
     '   You can use “really” to show you’re very sorry for something:',
     '   I’m really sorry I didn’t invite you to the party.',
@@ -65,8 +65,7 @@ export default [
     '   Let’s hire a band to play music, and Brent can photograph the event. How does that sound?'
   ],
   },
-
-   {
+{
     bg: '#FD5560',
     color: '#3F5B98',
     category: ' Could you repeat that please?',
@@ -74,7 +73,7 @@ export default [
     '   Could you please repeat that?',
     '   Could you repeat that please?' ,
     '   4. I will not have attended the program',
-    '   5. I will have arranged all the necessary materials',
+    '   5. I will have arranged all the necessary materials' ,
     '   6. They will have helped him to do the task.',
     '   7. I will have attended the program before I come here.'],
   },

@@ -36,7 +36,7 @@ export default class WritingScreen extends React.Component {
 
                 <TextInput style={styles.textInput}
                   onChangeText={(noteText) => this.setState({noteText})} value={this.state.noteText}
-                  placeholder='> Write here' placeholderTextColor='white' underlineColor='transparent'>
+                  placeholder='> Write here' placeholderTextColor='#f0f8ff' underlineColor='transparent'>
                 </TextInput>
 
             </View>
@@ -92,9 +92,9 @@ const styles = StyleSheet.create({
   },
   addButtom:{
     backgroundColor: '#66cdaa',
-    width: 90,
-    height: 90,
-    borderRadius: 50,
+    width: 80,
+    height: 80,
+    borderRadius: 40,
     borderBottomColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     color: '#fff',
     padding: 20,
-    paddingTop: 46,
+    paddingTop: 66,
     backgroundColor: '#708090',
     borderTopWidth: 2,
     borderTopColor: '#010b65',

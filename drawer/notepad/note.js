@@ -10,7 +10,7 @@ export default class WritingScreen extends React.Component {
             <Text style={styles.noteText}>{this.props.val.note}</Text>
 
             <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
-                <Text style={styles.noteDeleteText}>x</Text>
+                <Text style={styles.noteDeleteText}>X</Text>
             </TouchableOpacity>
 
         </View>
@@ -29,15 +29,15 @@ const styles = StyleSheet.create({
     noteText:{
       paddingLeft: 20,
       borderLeftWidth: 10,
-      borderLeftColor: '#E19E63',
+      borderLeftColor: '#40e0d0',
     },
     noteDelete:{
       position: 'absolute',
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#010b65',
+      backgroundColor: '#4682b4',
 
-      padding: 10,
+      padding: 15,
       top: 10,
       bottom: 10,
       right: 10,

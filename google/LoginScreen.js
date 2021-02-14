@@ -3,8 +3,6 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import firebase from 'firebase';
 import * as Google from 'expo-google-app-auth'; //import
 // import * as Facebook from 'expo-facebook';
-
-
 class LoginScreen extends Component {
 
   isUserEqual = (googleUser, firebaseUser) => {
@@ -82,8 +80,7 @@ class LoginScreen extends Component {
     );
   };
   
-
- signInWithFacebookAsync = async () => {
+  signInWithFacebookAsync = async () => {
   try {
     await Facebook.initializeAsync({
       appId: '',
@@ -119,7 +116,6 @@ class LoginScreen extends Component {
     );
   }
 
-  
   signInWithGoogleAsync = async () => {
     try {
       const result = await Google.logInAsync({
@@ -150,7 +146,6 @@ class LoginScreen extends Component {
   }
 }
 export default LoginScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -21,7 +21,7 @@
 //     alignItems: 'center', 
 //     justifyContent: 'center'
 //   },
-// });
+// }); 
 
 import * as React from 'react';
 import { StatusBar,Dimensions, TouchableOpacity, Animated, Text, View, StyleSheet, Image } from 'react-native';

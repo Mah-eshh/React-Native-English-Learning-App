@@ -25,14 +25,10 @@ I have visited Niagara Falls last weekend.
       />
     </View>
     <Separator />
-    <View>
-      <Text style={styles.title}>
-        The woman which works here is from Japan.
-      </Text>
-      <Button
-        title="WRONG"/>
-    </View>
+    <View> <Text style={styles.title}> The woman which works here is from Japan.</Text>
+      <Button title="WRONG"/> </View>
     <Separator />
+    
   <View>
       <Text style={styles.title}>
       The woman who works here is from Japan.

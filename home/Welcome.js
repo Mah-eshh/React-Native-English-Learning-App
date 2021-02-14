@@ -39,8 +39,7 @@ class Welcome extends React.Component {
       }
     });
   }
-
-  render() {
+render() {
     return (
       <View style={[this.props.style, styles.textWrapper]}>
         {this.textArr.map((word, index) => {
@@ -56,7 +55,6 @@ class Welcome extends React.Component {
                     {
                       translateY: Animated.multiply(
                         this.animatedValues[index],
-                        
                         new Animated.Value(-2)
                       ),
                     },

@@ -22,7 +22,7 @@ export default class Login extends React.Component {
     return (
       <View style={styles.container}>
        <Image
-          style={{ width:"50%", height: 200 }}
+          style={{ width:"40%", height: 200 }}
           source={require('../assets/mylo.png')}
           resizeMode="contain"
         />
@@ -52,17 +52,20 @@ export default class Login extends React.Component {
                   onPress={() => this.handleLogin()}
                   style={{ width: 350, backgroundColor: '#0d47a1', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginTop: 30 }}
                   >
-                  <Text style={{ textAlign: 'center', color: '#FFF', fontSize: 16 }}>Sign In </Text>
+                  <Text style={{ textAlign: 'center', color: '#FFF', fontSize: 16, }}>Sign In </Text>
                 </TouchableOpacity>
 
          <TouchableOpacity 
           onPress={() => this.props.navigation.navigate("SignUp")}
           style={{ width: 280, backgroundColor: '#FFF', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 30 }}
           >
-          <Text style={{ textAlign: 'center', color: '#0d47a1', fontSize: 16 }}>Don't have an account? Create here </Text>
+          <Text style={{ textAlign: 'center', color: '#0d47a1', fontSize: 15, padding:10, }}>Don't have an account? Create here </Text>
         </TouchableOpacity>
-         <FontAwesome.Button name="google" backgroundColor="#DD4B39" onPress={() => this.props.navigation.navigate("google")}>
-         Login with Google </FontAwesome.Button>
+         <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.props.navigation.navigate("google")}>
+         Login with Google    </FontAwesome.Button>
+           <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebook")}>
+         Login with Facebook </FontAwesome.Button>
+
 
       </View>
     );
@@ -77,12 +80,12 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 45,
-    width: "90%",
+    width: "85%",
     borderColor: "gray",
     borderWidth: 1,
     marginTop: 8,
     borderRadius: 8,
-    fontSize: 18,
+    fontSize: 19,
     padding:12,
     marginBottom: 10,
     marginBottom: 10,

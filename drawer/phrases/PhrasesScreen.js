@@ -12,7 +12,7 @@ const transition = (
   </Transition.Together>
 );
 
-export default function PhrasesScreen() {
+export default function PhrasesScreen() { 
   const [currentIndex, setCurrentIndex] = React.useState(null);
   const ref = React.useRef();
 

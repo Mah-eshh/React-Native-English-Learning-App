@@ -34,8 +34,8 @@ export default class SignUp extends React.Component {
           source={require('../assets/myUp.jpg')}
           resizeMode="contain"
         />
-      <Text style={{ fontSize: 25, fontWeight: 'bold', textAlign: 'center' }} >Hello! welcome to smart English app</Text>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center' }} >Create an account</Text>  
+      <Text style={{ fontSize: 23, fontWeight: 'bold', textAlign: 'center', padding:18 }} >Hello! welcome to smart English app</Text>
+      <Text style={{ fontSize: 18, fontWeight: '200', textAlign: 'center', padding:15 }} >Create an account</Text>  
         {this.state.errorMessage && (
           <Text style={{ color: "red" }}>{this.state.errorMessage}</Text>
         )}
@@ -68,17 +68,17 @@ export default class SignUp extends React.Component {
 
         <TouchableOpacity 
         onPress={() => this.props.navigation.navigate("Login")}
-          style={{ width: 280, backgroundColor: '#FFF', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginTop: 30 }}
+          style={{ width: 280, backgroundColor: '#FFF', padding: 20, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginTop: 30 }}
           >
-          <Text style={{ textAlign: 'center', color: '#0d47a1', fontSize: 16 }}>Have an account? Sign in </Text>
+          <Text style={{ textAlign: 'center', color: '#000080', fontSize: 17 }}>Have an account? Sign in </Text>
         </TouchableOpacity>
         
          {/* <Button
           title="Sign In With Google"
           onPress={() => this.props.navigation.navigate("google")}
         /> */}
-          <FontAwesome.Button name="google" backgroundColor="#DD4B39" onPress={() => this.props.navigation.navigate("google")}>
-         Login with Google </FontAwesome.Button>
+          <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.props.navigation.navigate("google")}>
+         Login with Google    </FontAwesome.Button>
 
      {/* <Icon.Button name="google"backgroundColor="#DD4B39" 
         style={{padding: 15}}>
@@ -86,13 +86,13 @@ export default class SignUp extends React.Component {
       </Icon.Button> */}
       
      <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebook")}>
-         Login with Google </FontAwesome.Button>
+         Login with Facebook </FontAwesome.Button>
 
-        <Button
+        {/* <Button
           title="Login via OTP"
           onPress={() => this.props.navigation.navigate("Otp")}
         /> 
-        
+         */}
       </View>
     );
   }
@@ -102,17 +102,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: '#fff'
    
   },
   textInput: {
     height: 45,
-    width: "90%",
+    width: "85%",
     borderColor: "gray",
     borderWidth: 1,
     marginTop: 8,
     borderRadius: 8,
-    fontSize: 18,
+    fontSize: 19,
     padding:12,
     marginBottom: 10,
-  }
+  },
 });

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import firebase from 'firebase';
-
-
 class LoadingScreen extends Component {
   componentDidMount() {
     this.checkIfLoggedIn();

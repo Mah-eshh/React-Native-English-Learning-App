@@ -4,9 +4,9 @@
     "slug": "myApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/adaptive-icon.png",
+    "icon": "./assets/myLog1.png",
     "splash": {
-      "image": "./assets/myLog1.png",
+      "image": "./assets/myLogo.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
