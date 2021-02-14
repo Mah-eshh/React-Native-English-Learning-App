@@ -68,9 +68,9 @@ export default class SignUp extends React.Component {
 
         <TouchableOpacity 
         onPress={() => this.props.navigation.navigate("Login")}
-          style={{ width: 280, backgroundColor: '#FFF', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginTop: 30 }}
+          style={{ width: 280, backgroundColor: '#FFF', padding: 20, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginTop: 30 }}
           >
-          <Text style={{ textAlign: 'center', color: '#0d47a1', fontSize: 16 }}>Have an account? Sign in </Text>
+          <Text style={{ textAlign: 'center', color: '#000080', fontSize: 17 }}>Have an account? Sign in </Text>
         </TouchableOpacity>
         
          {/* <Button
@@ -85,7 +85,7 @@ export default class SignUp extends React.Component {
         Login with Google
       </Icon.Button> */}
       
-     <FontAwesome.Button name="facebook" backgroundColor="#4682b4" onPress={() => this.props.navigation.navigate("facebook")}>
+     <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebook")}>
          Login with Facebook </FontAwesome.Button>
 
         {/* <Button
@@ -102,18 +102,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#ffffff'
+    backgroundColor: '#fff'
    
   },
   textInput: {
     height: 45,
-    width: "90%",
+    width: "85%",
     borderColor: "gray",
     borderWidth: 1,
     marginTop: 8,
     borderRadius: 8,
-    fontSize: 18,
+    fontSize: 19,
     padding:12,
     marginBottom: 10,
-  }
+  },
 });
