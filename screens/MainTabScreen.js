@@ -1,7 +1,6 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../home/HomeScreen';
@@ -116,7 +115,7 @@ const ListeningStackScreen = ({navigation}) => (
         headerStyle: {
         backgroundColor: '#1f65ff',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#fff', 
         headerTitleStyle: {
         fontWeight: 'bold'
         }

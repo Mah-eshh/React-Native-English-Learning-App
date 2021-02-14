@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { Text, View, StyleSheet,Vibration,ScrollView,TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import {Dimensions} from 'react-native';
-
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -61,8 +59,6 @@ const styles=StyleSheet.create({
   }
 })
 const TimeOpt = props => <TouchableOpacity onPress={props.onclick} style={styles.selectbutton}><Text>{props.num}</Text></TouchableOpacity>
-
-
 
 let flag=0
 export class MainTimer extends React.Component{
@@ -233,7 +229,6 @@ export default class SpeakingPractice extends React.Component{
                         <View style={{marginRight:10}}>
                         <Text style={{justifyContent:'center',fontSize:20}}>Minutes</Text>
                         <ScrollView >
-
                         {
                         arr.map(i=>(<TimeOpt key={i}  num={i} id={0} onclick={()=>this.setminute(i)}/>))
                         }
