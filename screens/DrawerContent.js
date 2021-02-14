@@ -133,7 +133,7 @@ export function DrawerContent(props) {
                         />
                          <DrawerItem 
                             icon={({color, size}) => (
-                              <Entypo name="time-slot" size={30} color="#663399" />
+                              <Entypo name="time-slot" size={30} color="black" />
                             )}
                             label="Speak with your self "
                             onPress={() => {props.navigation.navigate('SpeakingPractice')}}

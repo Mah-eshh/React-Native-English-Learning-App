@@ -13,7 +13,7 @@ const writeScreen = () => {
   const [value, onChangeText] = React.useState('Useless Multiline Placeholder');
   return (
     <View
-      
+       
       style={{
         backgroundColor: value,
         borderBottomColor: 'blue',

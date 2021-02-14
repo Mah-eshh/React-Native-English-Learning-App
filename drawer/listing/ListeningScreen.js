@@ -105,7 +105,6 @@ const audioBookPlaylist = [{
               <Ionicons name="ios-play-circle" size={64} color="#fff594" />
             )}
           </Buttons>
-
       
         </TouchableOpacity>
       </PlayButtonContainer>

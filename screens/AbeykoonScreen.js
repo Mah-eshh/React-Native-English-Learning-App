@@ -4,10 +4,10 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 const AbeykoonScreen = () => {
     return (
       <View style={styles.container}>
-        <Text> Abey screen </Text>
+        <Text> This is a test and not initial yet </Text>
         <Button
-          title="Click b Here"
-          onPress={() => alert('Button Clicked!')}
+          title="Click mahesh"
+          onPress={() => alert('mahesh Button Clicked!')}
         />
       </View>
     );

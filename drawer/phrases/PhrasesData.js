@@ -65,8 +65,7 @@ export default [
     '   Let’s hire a band to play music, and Brent can photograph the event. How does that sound?'
   ],
   },
-
-   {
+{
     bg: '#FD5560',
     color: '#3F5B98',
     category: ' Could you repeat that please?',

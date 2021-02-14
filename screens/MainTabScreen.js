@@ -78,7 +78,6 @@ const MainTabScreen = () => (
           ),
         }}
       />
-
     
     </Tab.Navigator>
     

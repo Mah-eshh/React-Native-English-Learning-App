@@ -13,7 +13,7 @@ var firebaseConfig = {
     appId: "1:215197510308:web:d17f60de74b890e9769431"
 
 };
-// Initialize Firebase mahesh 
+// Initialize Firebase mahesh firebase 
 firebase.initializeApp(firebaseConfig);
 
 // import the different screens
@@ -22,7 +22,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import AppMain from "./AppMain";
 import google from "./components/google";
-import Otp from "./components/Phone/Otp";
+import Otp from "./components/Phone/Otp";   // not work yet 
 import facebook from './components/facebook';
 
 // create our app's navigation stack

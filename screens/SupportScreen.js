@@ -12,7 +12,6 @@ const data = [
     'https://lessonsforenglish.com/wp-content/uploads/2020/05/160-Synonym-Words-List-in-English.png',
     'https://lessonsforenglish.com/wp-content/uploads/2019/12/Most-Common-Phrasal-Verbs-List.png', 
     
-
 ];
  
 const imageW = width * 0.8;

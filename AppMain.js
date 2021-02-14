@@ -55,19 +55,12 @@ const AppMain = () => {
              <Drawer.Screen name="WebBrowserScreen" component={WebBrowserScreen}/>
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
               <Drawer.Screen name="ProfileScreen" component={ProfileScreen}/>
-         
-          
-          
-          
-         
-          
-        
+
       </Drawer.Navigator>      
     </NavigationContainer>
 
   );
 };
-
 
 export default AppMain;
 

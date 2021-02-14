@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 const ProfileScreen = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <Text>Profile Screen </Text>
+        <Text>Test  Screen </Text>
        
         <Button
           title="Click Here"
