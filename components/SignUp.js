@@ -77,22 +77,22 @@ export default class SignUp extends React.Component {
           title="Sign In With Google"
           onPress={() => this.props.navigation.navigate("google")}
         /> */}
-          <FontAwesome.Button name="google" backgroundColor="#DD4B39" onPress={() => this.props.navigation.navigate("google")}>
-         Login with Google </FontAwesome.Button>
+          <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.props.navigation.navigate("google")}>
+         Login with Google    </FontAwesome.Button>
 
      {/* <Icon.Button name="google"backgroundColor="#DD4B39" 
         style={{padding: 15}}>
         Login with Google
       </Icon.Button> */}
       
-     <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebook")}>
-         Login with Google </FontAwesome.Button>
+     <FontAwesome.Button name="facebook" backgroundColor="#4682b4" onPress={() => this.props.navigation.navigate("facebook")}>
+         Login with Facebook </FontAwesome.Button>
 
-        <Button
+        {/* <Button
           title="Login via OTP"
           onPress={() => this.props.navigation.navigate("Otp")}
         /> 
-        
+         */}
       </View>
     );
   }
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: '#ffffff'
    
   },
   textInput: {
