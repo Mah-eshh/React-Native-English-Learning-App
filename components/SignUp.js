@@ -34,8 +34,8 @@ export default class SignUp extends React.Component {
           source={require('../assets/myUp.jpg')}
           resizeMode="contain"
         />
-      <Text style={{ fontSize: 25, fontWeight: 'bold', textAlign: 'center' }} >Hello! welcome to smart English app</Text>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center' }} >Create an account</Text>  
+      <Text style={{ fontSize: 23, fontWeight: 'bold', textAlign: 'center', padding:18 }} >Hello! welcome to smart English app</Text>
+      <Text style={{ fontSize: 18, fontWeight: '200', textAlign: 'center', padding:15 }} >Create an account</Text>  
         {this.state.errorMessage && (
           <Text style={{ color: "red" }}>{this.state.errorMessage}</Text>
         )}
