@@ -2,14 +2,11 @@ import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
-
 import HomeScreen from '../home/HomeScreen';
 import DetailsScreen from './DetailsScreen';
-
 import ReadingScreen from '../special/Reading/ReadingScreen';
 import AbeykoonScreen from './AbeykoonScreen';
 import ListeningScreen from '../drawer/listing/ListeningScreen';
-
 import WritingScreen from '../drawer/notepad/WritingScreen';
 import SpeakingPractice from '../timer/SpeakingPractice';
 
@@ -17,10 +14,8 @@ const HomeStack = createStackNavigator();
 const ListeningStack = createStackNavigator();
 const ReadingStack = createStackNavigator();
 const AbeykoonStack = createStackNavigator();
-
 const WritingStack = createStackNavigator();
 const SpeakingStack = createStackNavigator();
-
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -121,7 +116,7 @@ const ListeningStackScreen = ({navigation}) => (
         }
     }}>
         <ListeningStack.Screen name="Listening" component={ListeningScreen} options={{
-        title: 'Method (i) LISTENING',
+        title: 'LISTENING',
         headerLeft: () => (
             <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
@@ -140,7 +135,7 @@ const ReadingStackScreen = ({navigation}) => (
         }
     }}>
         <ReadingStack.Screen name="pro" component={ReadingScreen} options={{
-        title:'Method (ii) READING',
+        title:'READING',
         headerLeft: () => (
             <Icon.Button name="ios-menu" size={25} backgroundColor="#000080" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
@@ -159,7 +154,7 @@ const WritingStackScreen = ({navigation}) => (
         }
     }}>
         <WritingStack.Screen name="pro2" component={WritingScreen} options={{
-        title:'Method (iii) WRITING',
+        title:'WRITING',
         headerLeft: () => (
             <Icon.Button name="ios-menu" size={25} backgroundColor="#008080" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
@@ -178,7 +173,7 @@ const SpeakingStackPractice = ({navigation}) => (
         }
     }}>
         <SpeakingStack.Screen name="Speaking" component={SpeakingPractice} options={{
-        title:'Method (iv) SPEAKING',
+        title:'SPEAKING',
         headerLeft: () => (
             <Icon.Button name="ios-menu" size={25} backgroundColor="#c71585" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
