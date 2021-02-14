@@ -25,7 +25,6 @@ const DetailsScreen = ({navigation}) =>{
             title= "Go the first screen">
         </Button>
 
-
     </View>
   );
 };

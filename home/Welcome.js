@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Animated } from 'react-native';
-
 class Welcome extends React.Component {
   animatedValues = [];
   animations = [];
@@ -89,6 +88,5 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
     
-  
   },
 });

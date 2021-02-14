@@ -4,7 +4,6 @@ import { StyleSheet, Button, View, SafeAreaView, Text, Alert, ScrollView} from '
 const Separator = () => (
   <View style={styles.separator} />
 );
-
 const GMScreen = () => (
   <SafeAreaView style={styles.container}>
    <ScrollView style={styles.scrollView}>

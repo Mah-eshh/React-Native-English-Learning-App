@@ -35,7 +35,7 @@ const MainTabScreen = () => (
         component={HomeStackScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarColor: '#009387',
+          tabBarColor: '#0096ff',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-home" color={color} size={26} />
           ),
@@ -57,7 +57,7 @@ const MainTabScreen = () => (
         component={ReadingStackScreen}
         options={{
           tabBarLabel: 'Reading',
-          tabBarColor: '#694fad',
+          tabBarColor: '#000080',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-book" color={color} size={26} />
           ),
@@ -68,7 +68,7 @@ const MainTabScreen = () => (
         component={WritingStackScreen}
         options={{
           tabBarLabel: 'Wirting',
-          tabBarColor: '#d02860',
+          tabBarColor: '#008080',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-pencil" color={color} size={26} />
           ),
@@ -80,7 +80,7 @@ const MainTabScreen = () => (
         component={SpeakingStackPractice}
         options={{
           tabBarLabel: 'Speaking',
-          tabBarColor: '#d02860',
+          tabBarColor: '#c71585',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-timer-outline" color={color} size={26} />
           ),
@@ -97,7 +97,7 @@ export default MainTabScreen;
 const HomeStackScreen = ({navigation}) => (
 <HomeStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#009387',
+        backgroundColor: '#0096ff',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -107,7 +107,7 @@ const HomeStackScreen = ({navigation}) => (
         <HomeStack.Screen name="Home" component={HomeScreen} options={{
         title:'HOME',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#0096ff" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </HomeStack.Navigator>
@@ -135,7 +135,7 @@ const ListeningStackScreen = ({navigation}) => (
 const ReadingStackScreen = ({navigation}) => (
 <ReadingStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#694fad',
+        backgroundColor: '#000080',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -145,7 +145,7 @@ const ReadingStackScreen = ({navigation}) => (
         <ReadingStack.Screen name="pro" component={ReadingScreen} options={{
         title:'Method (ii) READING',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#694fad" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#000080" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </ReadingStack.Navigator>
@@ -154,7 +154,7 @@ const ReadingStackScreen = ({navigation}) => (
 const WritingStackScreen = ({navigation}) => (
 <WritingStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#d02860',
+        backgroundColor: '#008080',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -164,7 +164,7 @@ const WritingStackScreen = ({navigation}) => (
         <WritingStack.Screen name="pro2" component={WritingScreen} options={{
         title:'Method (iii) WRITING',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#d02860" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#008080" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </WritingStack.Navigator>
@@ -173,7 +173,7 @@ const WritingStackScreen = ({navigation}) => (
 const SpeakingStackPractice = ({navigation}) => (
 <SpeakingStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#d02860',
+        backgroundColor: '#c71585',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
@@ -183,7 +183,7 @@ const SpeakingStackPractice = ({navigation}) => (
         <SpeakingStack.Screen name="Speaking" component={SpeakingPractice} options={{
         title:'Method (iv) SPEAKING',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#d02860" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#c71585" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </SpeakingStack.Navigator>

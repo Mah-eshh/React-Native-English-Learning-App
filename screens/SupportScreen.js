@@ -4,13 +4,13 @@ const { width, height } = Dimensions.get('screen');
 
 const data = [
     'https://lessonsforenglish.com/wp-content/uploads/2019/12/100-Most-Common-Phrasal-Verbs-List.png',
-    'https://lessonsforenglish.com/wp-content/uploads/2020/05/Most-Important-Opposite-Words-List.png',
+    'https://lessonsforenglish.com/wp-content/uploads/2020/05/Most-Important-Opposite-Words-List.png', 
     'https://lessonsforenglish.com/wp-content/uploads/2020/05/900-Opposite-Words-in-English-1.png',
     'https://lessonsforenglish.com/wp-content/uploads/2020/05/Basic-and-Detailed-Opposite-Words-List.png',
     'https://lessonsforenglish.com/wp-content/uploads/2020/06/360-Synonyms-Words-List-in-English.png',
     'https://lessonsforenglish.com/wp-content/uploads/2020/05/Most-Important-Opposite-Words-List.png',
     'https://lessonsforenglish.com/wp-content/uploads/2020/05/160-Synonym-Words-List-in-English.png',
-    'https://lessonsforenglish.com/wp-content/uploads/2019/12/Most-Common-Phrasal-Verbs-List.png',
+    'https://lessonsforenglish.com/wp-content/uploads/2019/12/Most-Common-Phrasal-Verbs-List.png', 
     
 
 ];

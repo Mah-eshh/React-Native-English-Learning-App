@@ -69,7 +69,7 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                               <Entypo name="book" size={30} color="black" />
                             )}
-                            label="Mahesh"
+                            label="Become Fluent in English"
                             onPress={() => {props.navigation.navigate('MaheshScreen')}}
                         />
                         <DrawerItem 
@@ -98,26 +98,15 @@ export function DrawerContent(props) {
                             label="Improve Vocabulary"
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
-{/*                         
-                                <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="chat-outline" 
-                                color={"green"}
-                                size={size}
-                                />
-                            )}
-                            label="Chatting Practice"
-                            onPress={() => {props.navigation.navigate('ChattingRoom')}}
-                        /> */}
-                        <DrawerItem 
+                      
+                        {/* <DrawerItem 
                             icon={({color, size}) => (
                              <Entypo name="music" size={30} color="black" />
                             
                             )}
                             label="English Songs"
                             onPress={() => {props.navigation.navigate('MusicsScreen')}}
-                        />
+                        /> */}
                         <DrawerItem 
                             icon={({color, size}) => (
                               <FontAwesome5 name="headphones" size={30} color="black" />
@@ -173,10 +162,24 @@ export function DrawerContent(props) {
                             label="Free PDF "
                             onPress={() => {props.navigation.navigate('PDFScreen')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <MaterialCommunityIcons name="google-translate" size={30} color="#6495ed" />
+                            )}
+                            label="Google Translate "
+                            onPress={() => {props.navigation.navigate('WebBrowserScreen')}}
+                        />
+                          <DrawerItem 
+                            icon={({color, size}) => (
+                                <FontAwesome5 name="medium" size={30} color="black" />
+                            )}
+                            label="About us"
+                            onPress={() => {props.navigation.navigate('ProfileScreen')}}
+                        />
 
                     </Drawer.Section>
 
-                    <Drawer.Section title="Preferences">
+                    {/* <Drawer.Section title="Preferences">
                         <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
                                 <Text>Dark Theme</Text>
@@ -185,7 +188,7 @@ export function DrawerContent(props) {
                                 </View>
                             </View>
                         </TouchableRipple>
-                    </Drawer.Section>
+                    </Drawer.Section> */}
 
                 </View>
             </DrawerContentScrollView>
