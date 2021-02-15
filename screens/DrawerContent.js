@@ -80,17 +80,13 @@ export function DrawerContent(props) {
                             label="Basic English Phrases"
                             onPress={() => {props.navigation.navigate('PhrasesScreen')}}
                         />
-                          {/* <DrawerItem 
+                          <DrawerItem 
                             icon={({color, size}) => (
-                                <Icon 
-                                name="Abeykoon-outline" 
-                                color={color}
-                                size={size}
-                                />
+                            <MaterialCommunityIcons name="account-tie-voice" size={30} color="black" />
                             )}
-                            label="Abeykoon"
-                            onPress={() => {props.navigation.navigate('AbeykoonScreen')}}
-                        /> */}
+                            label="Accurate Pronunciation"
+                            onPress={() => {props.navigation.navigate('PronunScreen')}}
+                        />
                         
                         <DrawerItem 
                             icon={({color, size}) => (

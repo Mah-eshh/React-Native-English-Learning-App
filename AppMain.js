@@ -10,7 +10,7 @@ import SupportScreen from './screens/SupportScreen';
 import  GMScreen from './screens/GMScreen';
 
 // import  DicScreen from './Dictionary/DicScreen';
-import AbeykoonScreen from './screens/AbeykoonScreen';
+import PronunScreen from './screens/PronunScreen';
 
 // import ChattingRoom from './chat/ChattingRoom';
 import MusicsScreen from './screens/MusicsScreen';
@@ -43,7 +43,7 @@ const AppMain = () => {
 
           <Drawer.Screen name="GMScreen" component={GMScreen} />
           {/* <Drawer.Screen name="DicScreen" component={DicScreen} /> */}
-          <Drawer.Screen name="AbeykoonScreen" component={AbeykoonScreen}/>
+          <Drawer.Screen name="PronunScreen" component={PronunScreen}/>
           {/* <Drawer.Screen name="ChattingRoom" component={ChattingRoom} /> */}
           <Drawer.Screen name="MusicsScreen" component={MusicsScreen} />
           <Drawer.Screen name="ListeningScreen" component={ListeningScreen}/>

@@ -147,7 +147,7 @@ export default class  MusicsScreen extends React.Component {
 		) : null
 	}
 
-	render() {
+render() {
 		return (
 			<View style={styles.container}>
 				<Image
