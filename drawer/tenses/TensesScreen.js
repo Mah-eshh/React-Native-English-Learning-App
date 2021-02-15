@@ -4,11 +4,11 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import data from '../tenses/data';
 import { Transition, Transitioning } from 'react-native-reanimated';
 
-const transition = (
+const transitions = (
   <Transition.Together>
-    <Transition.In type='fade' durationMs={200} />
+    <Transition.In type='fade' duration={200} />
     <Transition.Change />
-    <Transition.Out type='fade' durationMs={200} />
+    <Transition.Out type='fade' duration={200} />
   </Transition.Together>
 );
 
@@ -19,7 +19,7 @@ export default function TensesScreen() {
   return (
     <Transitioning.View
       ref={ref}
-      transition={transition}
+      transitions={transitions}
       style={styles.container}
     >
       <StatusBar hidden />
@@ -31,7 +31,7 @@ export default function TensesScreen() {
               ref.current.animateNextTransition();
               setCurrentIndex(index === currentIndex ? null : index);
             }}
-            style={styles.cardContainer}
+            style={styles.cardCon}
             activeOpacity={0.9}
           >
             <View style={[styles.card, { backgroundColor: bg }]}>
@@ -59,17 +59,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     justifyContent: 'center',
   },
-  cardContainer: {
+  cardCon: {
     flexGrow: 1,
   },
   card: {
-    flexGrow: 1,
+    flexGrow: 2,
     alignItems: 'center',
     justifyContent: 'center',
   },
   heading: {
     fontSize: 28,
-    fontWeight: '900',
+    fontWeight: 'normal',
     textTransform: 'uppercase',
     letterSpacing: -1,
   },
