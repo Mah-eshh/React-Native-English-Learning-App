@@ -11,7 +11,7 @@ export default class Loading extends React.Component {
   render() {
     return (
       <View style={styles.container}>
- <Text style={{ fontSize: 25, fontWeight: 'bold', textAlign: 'center' }} >Hello! welcome to smart English app</Text>
+ <Text style={{ fontSize: 25, fontWeight: 'bold', textAlign: 'center' }} >Hello! Wlcome to smart English app</Text>
       <Image
           style={{ width:"50%", height: 300 }}
           source={require('../assets/myLog1.png')}
