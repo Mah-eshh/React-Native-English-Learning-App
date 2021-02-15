@@ -32,10 +32,11 @@ const AboutScreen = ({navigation}) =>{
                 
                 
                <Ionicons 
+               title= "Go back"
+               label="dfgd"
                onPress={() => navigation.goBack()}
                name="md-arrow-back" size={24} 
-               title= "Go back"
-              color='#F99' />
+              color='#000080' />
              
 
       </View>
