@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet,TextInput } from 'react-native';
-
+import { Ionicons } from '@expo/vector-icons';
 
 const AboutScreen = ({navigation}) =>{
   return (
@@ -28,11 +28,16 @@ const AboutScreen = ({navigation}) =>{
     
   
       <View style={styles.backB}>
-          <Button 
-                onPress={() => navigation.goBack()}
-                title= "Go back"
-                color='#F99'
-            /> 
+         
+                
+                
+               <Ionicons 
+               onPress={() => navigation.goBack()}
+               name="md-arrow-back" size={24} 
+               title= "Go back"
+              color='#F99' />
+             
+
       </View>
 
 
@@ -55,8 +60,8 @@ const styles = StyleSheet.create({
   },backB:{
     //flex:1,
     padding:10,
-    height:350,
-    width:100,
+    height:40,
+    width:350,
   },inputbox:{
     backgroundColor:'white',
     width:250,
