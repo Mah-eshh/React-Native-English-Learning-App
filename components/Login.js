@@ -48,7 +48,7 @@ export default class Login extends React.Component {
           onChangeText={password => this.setState({ password })}
           value={this.state.password}
         />
-              <TouchableOpacity 
+          <TouchableOpacity 
                   onPress={() => this.handleLogin()}
                   style={{ width: 350, backgroundColor: '#0d47a1', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginTop: 30 }}
                   >

@@ -7,7 +7,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import MainTabScreen from './screens/MainTabScreen'; 
 import SupportScreen from './screens/SupportScreen';
 
-
 import  GMScreen from './screens/GMScreen';
 
 // import  DicScreen from './Dictionary/DicScreen';
@@ -63,9 +62,6 @@ const AppMain = () => {
 };
 
 export default AppMain;
-
-
-
 
 
 

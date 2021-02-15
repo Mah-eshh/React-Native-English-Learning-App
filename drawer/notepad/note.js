@@ -45,4 +45,5 @@ const styles = StyleSheet.create({
     noteDeleteText:{
       color: 'white',
     }
+    
 });

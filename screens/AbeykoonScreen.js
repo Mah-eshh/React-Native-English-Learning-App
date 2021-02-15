@@ -6,7 +6,7 @@ const AbeykoonScreen = () => {
       <View style={styles.container}>
         <Text> This is a test and not initial yet </Text>
         <Button
-          title="Click mahesh"
+          title="Click mahesh "
           onPress={() => alert('mahesh Button Clicked!')}
         />
       </View>

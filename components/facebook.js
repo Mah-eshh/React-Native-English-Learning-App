@@ -61,7 +61,7 @@ async function logInFB() {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={() => logInFB()}>
-        <Text style={styles.text}>Connect with Facebook</Text>
+        <Text style={styles.text}>Connect with Facebook </Text>
       </TouchableOpacity>
     </View>
   );
