@@ -4,7 +4,6 @@ import * as Facebook from 'expo-facebook';
 
 export default function facebook() {
 
-
 async function logInFB() {
   try {
     await Facebook.initializeAsync({
