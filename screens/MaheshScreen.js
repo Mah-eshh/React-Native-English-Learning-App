@@ -1,38 +1,14 @@
-// import React from 'react';
-// import { View, Text, Button, StyleSheet } from 'react-native';
-
-// const MaheshScreen = () => {
-//     return (
-//       <View style={styles.container}>
-//         <Text> mahesh screen </Text>
-//         <Button
-//           title="Click b Here"
-//           onPress={() => alert('Button Clicked!')}
-//         />
-//       </View>
-//     );
-// };
-
-// export default MaheshScreen;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1, 
-//     alignItems: 'center', 
-//     justifyContent: 'center'
-//   },
-// }); 
-
-import * as React from 'react';
-import { StatusBar,Dimensions, TouchableOpacity, Animated, Text, View, StyleSheet, Image } from 'react-native';
-import Constants from 'expo-constants';
 import { AntDesign } from '@expo/vector-icons';
-const { width } = Dimensions.get('window');
-const AnimatedAntDesign = Animated.createAnimatedComponent(AntDesign);
-const DURATION = 1000;
-const TEXT_DURATION = DURATION * 0.8;
+import * as React from 'react';
+import Constants from 'expo-constants';
+import { StatusBar,Dimensions, TouchableOpacity, Animated, Text, View, StyleSheet, Image } from 'react-native';
 
-const quotes = [
+const { width } = Dimensions.get('window');
+const AnimAntDesign = Animated.createAnimatedComponent(AntDesign);
+const TimeDURATION = 1000;
+const TEXT_DURATION = TimeDURATION * 0.5;
+
+const myquotes = [
   { 
     quote: 'Find    English Speakers  and Practice   Your   Communication    Skills',
     },
@@ -58,7 +34,7 @@ const quotes = [
  
 ];
 
-const Circle = ({ onPress, index, quotes, animatedValue, animatedValue2 }) => {
+const Circle = ({ onPress, index, myquotes, animatedValue, animatedValue2 }) => {
   const { initialBgColor, nextBgColor, bgColor } = colors[index];
   const inputRange = [0, 0.001, 0.5, 0.501, 1];
   const backgroundColor = animatedValue2.interpolate({
@@ -142,7 +118,7 @@ const Circle = ({ onPress, index, quotes, animatedValue, animatedValue2 }) => {
               },
             ]}
           >
-            <AnimatedAntDesign name='arrowright' size={35} color={'white'} />
+            <AnimAntDesign name='arrowright' size={35} color={'white'} />
           </Animated.View>
         </TouchableOpacity>
       </Animated.View>
@@ -187,7 +163,7 @@ export default function MaheshScreen() {
   const animatedValue = React.useRef(new Animated.Value(0)).current;
   const animatedValue2 = React.useRef(new Animated.Value(0)).current;
   const sliderAnimatedValue = React.useRef(new Animated.Value(0)).current;
-  const inputRange = [...Array(quotes.length).keys()];
+  const inputRange = [...Array(myquotes.length).keys()];
   const [index, setIndex] = React.useState(0);
 
   const animate = (i) =>
@@ -199,12 +175,12 @@ export default function MaheshScreen() {
       }),
       Animated.timing(animatedValue, {
         toValue: 1,
-        duration: DURATION,
+        duration: TimeDURATION,
         useNativeDriver: true,
       }),
       Animated.timing(animatedValue2, {
         toValue: 1,
-        duration: DURATION,
+        duration: TimeDURATION,
         useNativeDriver: false,
       }),
     ]);
@@ -222,7 +198,7 @@ export default function MaheshScreen() {
       <Circle
         index={index}
         onPress={onPress}
-        quotes={quotes}
+        myquotes={myquotes}
         animatedValue={animatedValue}
         animatedValue2={animatedValue2}
       />
@@ -233,21 +209,21 @@ export default function MaheshScreen() {
             {
               translateX: sliderAnimatedValue.interpolate({
                 inputRange,
-                outputRange: quotes.map((_, i) => -i * width * 2),
+                outputRange:myquotes.map((_, i) => -i * width * 2),
               }),
             },
           ],
           opacity: sliderAnimatedValue.interpolate({
-            inputRange: [...Array(quotes.length * 2 + 1).keys()].map(
+            inputRange: [...Array(myquotes.length * 2 + 1).keys()].map(
               (i) => i / 2
             ),
-            outputRange: [...Array(quotes.length * 2 + 1).keys()].map((i) =>
+            outputRange: [...Array(myquotes.length * 2 + 1).keys()].map((i) =>
               i % 2 === 0 ? 1 : 0
             ),
           }),
         }}
       >
-        {quotes.slice(0, colors.length).map(({ quote, author }, i) => {
+        {myquotes.slice(0, colors.length).map(({ quote, author }, i) => {
           return (
             <View style={{ paddingRight: width, width: width * 2 }} key={i}>
               <Text
