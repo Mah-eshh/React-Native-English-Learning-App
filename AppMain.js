@@ -57,6 +57,7 @@ const AppMain = () => {
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
               <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
               <Drawer.Screen name="DetailsScreen" component={DetailsScreen}/>
+              
 
       </Drawer.Navigator>      
     </NavigationContainer>
