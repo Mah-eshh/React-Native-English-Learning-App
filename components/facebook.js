@@ -30,7 +30,6 @@ async function logInFB() {
   }
 }
 
-
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={() => logInFB()}>

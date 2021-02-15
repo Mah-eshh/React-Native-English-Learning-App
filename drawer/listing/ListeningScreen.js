@@ -8,7 +8,7 @@ import { View } from "native-base";
 
 const audioBookPlaylist = [{
     uri: "http://stream.falconinternet.net:8020/;mp3"}] ;
-    export default class App extends React.Component {
+    export default class z extends React.Component {
   state = {
     isPlaying: false,
     playbackInstance: null,

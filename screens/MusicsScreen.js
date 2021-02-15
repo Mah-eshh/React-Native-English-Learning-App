@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, View, Image, Text } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { Audio } from 'expo-av'
 
-const audioBookPlaylist = [
+const MyAudioBookPlaylist = [
 	{
 		title: 'Alone',
 		author: 'Alan Walker',
@@ -76,14 +76,14 @@ export default class  MusicsScreen extends React.Component {
 		try {
 			const playbackInstance = new Audio.Sound()
 			const source = {
-				uri: audioBookPlaylist[currentIndex].uri
+				uri: MyAudioBookPlaylist[currentIndex].uri
 			}
 
 			const status = {
 				shouldPlay: isPlaying,
 				volume: volume
 			}
-			playbackInstance.setOnPlaybackStatusUpdate(this.onPlaybackStatusUpdate)
+			playbackInstance.setOnPlaybackStatusUpdate(this.onPlaybackUpdate)
 			await playbackInstance.loadAsync(source, status, false)
 			this.setState({
 				playbackInstance
@@ -93,7 +93,7 @@ export default class  MusicsScreen extends React.Component {
 		}
 	}
 
-	onPlaybackStatusUpdate = status => {
+	onPlaybackUpdate = status => {
 		this.setState({
 			isBuffering: status.isBuffering
 		})
@@ -113,7 +113,7 @@ export default class  MusicsScreen extends React.Component {
 		if (playbackInstance) {
 			await playbackInstance.unloadAsync()
 			this.setState({
-				currentIndex : (currentIndex === 0 ? audioBookPlaylist.length -1 : currentIndex-1)
+				currentIndex : (currentIndex === 0 ? MyAudioBookPlaylist.length -1 : currentIndex-1)
 			});
 			this.loadAudio()
 		}
@@ -124,7 +124,7 @@ export default class  MusicsScreen extends React.Component {
 		if (playbackInstance) {
 			await playbackInstance.unloadAsync()
 			this.setState({
-				currentIndex: (currentIndex+1 > audioBookPlaylist.length - 1 ? 0 : currentIndex+1)
+				currentIndex: (currentIndex+1 > MyAudioBookPlaylist.length - 1 ? 0 : currentIndex+1)
 			});
 			this.loadAudio()
 		}
@@ -135,13 +135,13 @@ export default class  MusicsScreen extends React.Component {
 		return playbackInstance ? (
 			<View style={styles.trackInfo}>
 				<Text style={[styles.trackInfoText, styles.largeText]}>
-					{audioBookPlaylist[currentIndex].title}
+					{MyAudioBookPlaylist[currentIndex].title}
 				</Text>
 				<Text style={[styles.trackInfoText, styles.smallText]}>
-					{audioBookPlaylist[currentIndex].author}
+					{MyAudioBookPlaylist[currentIndex].author}
 				</Text>
 				<Text style={[styles.trackInfoText, styles.smallText]}>
-					{audioBookPlaylist[currentIndex].source}
+					{MyAudioBookPlaylist[currentIndex].source}
 				</Text>
 			</View>
 		) : null
@@ -150,6 +150,7 @@ export default class  MusicsScreen extends React.Component {
 	render() {
 		return (
 			<View style={styles.container}>
+			<Text style={styles.txt} >  Learn English with Songs  </Text>
 				<Image
 					style={styles.albumCover}
 					source={{ uri: 'https://image.winudf.com/v2/image/Y29tLmJ1ZmZhbG8uc29mdHdhcmUuZW5nbGlzaGxpc3RlbmluZ19pY29uX3NxbXhtZW1v/icon.png?w=&fakeurl=1' }}
@@ -203,7 +204,13 @@ const styles = StyleSheet.create({
 	},
 	controls: {
 		flexDirection: 'row'
+	},
+	txt: {
+		color: '#550088',
+		padding: 30,
+		fontSize:30
 	}
+
 })
 
 

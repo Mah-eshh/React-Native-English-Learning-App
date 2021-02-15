@@ -15,11 +15,11 @@ const data = [
 ];
  
 
-const imageW = width * 0.8;
-const imageH = imageW * 1.65;
+const imageWidth = width * 0.8;
+const imageHi = imageWidth * 1.65;
 
 export default () => {
-    const scrollX = React.useRef(new Animated.Value(0)).current;
+    const scroll = React.useRef(new Animated.Value(0)).current;
 
     return (
         <View style={{ flex: 1, backgroundColor: '#000' }}>
@@ -33,7 +33,7 @@ export default () => {
                         index * width,
                         (index + 1 ) * width
                     ]
-                    const opacity = scrollX.interpolate({
+                    const opacity = scroll.interpolate({
                         inputRange,
                         outputRange: [0, 1, 0]
                     })   
@@ -53,7 +53,7 @@ export default () => {
             <Animated.FlatList 
                 data={data}
                 onScroll={Animated.event(
-                    [{nativeEvent: {contentOffset: {x: scrollX  }}}],
+                    [{nativeEvent: {contentOffset: {x: scroll }}}],
                     { useNativeDriver: true}
                 )}
                 keyExtractor={(_, index) => index.toString ()}
@@ -62,7 +62,7 @@ export default () => {
                 renderItem={({item}) => {
                     return <View style={{width, justifyContent: 'center', alignItems: 'center',
                     shadowColor: '#000',
-                    shadowOpacity: .5,
+                    shadowOpacity: .2,
                     shadowOffset: {
                         width: 0,
                         height: 0,
@@ -70,8 +70,8 @@ export default () => {
                     shadowRadius:20
                     }}>
                         <Image source={{uri: item}} style={{
-                            width: imageW,
-                            height: imageH,
+                            width: imageWidth,
+                            height: imageHi,
                             resizeMode: 'cover',
                             borderRadius:16
                         }}/>
