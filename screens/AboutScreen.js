@@ -27,7 +27,7 @@ const AboutScreen = ({navigation}) =>{
 
     
   
-      <View style={styles.backbtn}>
+      <View style={styles.backB}>
           <Button 
                 onPress={() => navigation.goBack()}
                 title= "Go back"
@@ -52,10 +52,10 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:'center',
     justifyContent:'center'
-  },backbtn:{
+  },backB:{
     //flex:1,
     padding:10,
-    height:35,
+    height:350,
     width:100,
   },inputbox:{
     backgroundColor:'white',
