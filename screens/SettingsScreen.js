@@ -12,7 +12,7 @@ const SettingsScreen = () => {
       </View>
     );
 };
-
+ 
 export default SettingsScreen;
 
 const styles = StyleSheet.create({

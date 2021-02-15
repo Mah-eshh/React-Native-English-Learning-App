@@ -43,3 +43,4 @@ const RootStack = createSwitchNavigator(
 
 const App = createAppContainer(RootStack);
 export default App;
+

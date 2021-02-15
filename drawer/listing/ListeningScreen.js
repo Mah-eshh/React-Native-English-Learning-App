@@ -123,6 +123,7 @@ const PlayButtonContainer = styled.View`
   flex: 1;
 `;
 
+
 const Buttons = styled.Text`
   width: 395px;
   height: 64px;

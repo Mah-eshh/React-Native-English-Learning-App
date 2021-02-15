@@ -14,6 +14,7 @@ const data = [
     
 ];
  
+
 const imageW = width * 0.8;
 const imageH = imageW * 1.65;
 

@@ -81,4 +81,5 @@ const styles = StyleSheet.create({
   subCategoriesList: {
     marginTop: 20,
   },
+  
 });

@@ -73,6 +73,7 @@ render() {
   }
 }
 
+
 Welcome.defaultProps = {
   timing:900,
   content: '',

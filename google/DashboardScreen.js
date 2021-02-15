@@ -6,7 +6,7 @@ class DashboardScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Mahesh Screen </Text>
+        <Text> welcome to Mahesh Screen </Text>
         <Button title="Sign out" onPress={() => firebase.auth().signOut()} />
       </View>
     );
@@ -21,3 +21,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   }
 });
+

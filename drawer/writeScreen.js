@@ -16,7 +16,7 @@ const writeScreen = () => {
        
       style={{
         backgroundColor: value,
-        borderBottomColor: 'blue',
+        borderBottomColor: 'blue', 
         borderBottomWidth: 1,
       }}>
       <UselessTextInput

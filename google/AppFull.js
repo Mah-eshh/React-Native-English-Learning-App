@@ -21,7 +21,7 @@ export default class App extends React.Component {
 }
 
 const AppSwitchNavigator = createSwitchNavigator({
-  // LoadingScreen: LoadingScreen,
+  // LoadingScreen: LoadingScreen, 
   LoginScreen: LoginScreen,
   DashboardScreen: DashboardScreen
 });

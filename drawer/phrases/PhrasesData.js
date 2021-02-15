@@ -78,6 +78,4 @@ export default [
     '   7. I will have attended the program before I come here.'],
   },
  
-  
-
 ];
