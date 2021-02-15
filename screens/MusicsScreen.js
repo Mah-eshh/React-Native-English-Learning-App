@@ -3,7 +3,6 @@ import { StyleSheet, TouchableOpacity, View, Image, Text } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { Audio } from 'expo-av'
 
-
 const audioBookPlaylist = [
 	{
 		title: 'Alone',
@@ -148,7 +147,7 @@ export default class  MusicsScreen extends React.Component {
 		) : null
 	}
 
-render() {
+	render() {
 		return (
 			<View style={styles.container}>
 				<Image

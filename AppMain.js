@@ -25,7 +25,9 @@ import SpeakingPractice from './timer/SpeakingPractice';
 // import myShare from './screens/myShare';
 import WebBrowserScreen from './drawer/web/WebBrowserScreen';
 import PDFScreen from './drawer/web/PDFScreen';
-import ProfileScreen from './screens/ProfileScreen';
+import AboutScreen from './screens/AboutScreen';
+import DetailsScreen from './screens/DetailsScreen';
+
 import * as firebase from "firebase";
 const Drawer = createDrawerNavigator();
 
@@ -53,7 +55,8 @@ const AppMain = () => {
            {/* <Drawer.Screen name="myShare" component={myShare}/> */}
              <Drawer.Screen name="WebBrowserScreen" component={WebBrowserScreen}/>
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
-              <Drawer.Screen name="ProfileScreen" component={ProfileScreen}/>
+              <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
+              <Drawer.Screen name="DetailsScreen" component={DetailsScreen}/>
 
       </Drawer.Navigator>      
     </NavigationContainer>
