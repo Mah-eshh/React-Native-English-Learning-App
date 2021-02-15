@@ -1,38 +1,14 @@
-// import React from 'react';
-// import { View, Text, Button, StyleSheet } from 'react-native';
-
-// const MaheshScreen = () => {
-//     return (
-//       <View style={styles.container}>
-//         <Text> mahesh screen </Text>
-//         <Button
-//           title="Click b Here"
-//           onPress={() => alert('Button Clicked!')}
-//         />
-//       </View>
-//     );
-// };
-
-// export default MaheshScreen;
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1, 
-//     alignItems: 'center', 
-//     justifyContent: 'center'
-//   },
-// }); 
-
-import * as React from 'react';
-import { StatusBar,Dimensions, TouchableOpacity, Animated, Text, View, StyleSheet, Image } from 'react-native';
-import Constants from 'expo-constants';
 import { AntDesign } from '@expo/vector-icons';
-const { width } = Dimensions.get('window');
-const AnimatedAntDesign = Animated.createAnimatedComponent(AntDesign);
-const DURATION = 1000;
-const TEXT_DURATION = DURATION * 0.8;
+import * as React from 'react';
+import Constants from 'expo-constants';
+import { StatusBar,Dimensions, TouchableOpacity, Animated, Text, View, StyleSheet, Image } from 'react-native';
 
-const quotes = [
+const { width } = Dimensions.get('window');
+const AnimAntDesign = Animated.createAnimatedComponent(AntDesign);
+const TimeDURATION = 1000;
+const TEXT_DURATION = TimeDURATION * 0.5;
+
+const myquotes = [
   { 
     quote: 'Find    English Speakers  and Practice   Your   Communication    Skills',
     },
@@ -58,10 +34,10 @@ const quotes = [
  
 ];
 
-const Circle = ({ onPress, index, quotes, animatedValue, animatedValue2 }) => {
+const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 }) => {
   const { initialBgColor, nextBgColor, bgColor } = colors[index];
   const inputRange = [0, 0.001, 0.5, 0.501, 1];
-  const backgroundColor = animatedValue2.interpolate({
+  const backgroundColor = myanimatedValue2.interpolate({
     inputRange,
     outputRange: [
       initialBgColor,
@@ -71,7 +47,7 @@ const Circle = ({ onPress, index, quotes, animatedValue, animatedValue2 }) => {
       bgColor,
     ],
   });
-  const dotBgColor = animatedValue2.interpolate({
+  const dotBgColor = myanimatedValue2.interpolate({
     inputRange: [0, 0.001, 0.5, 0.501, 0.9, 1],
     outputRange: [
       bgColor,
@@ -99,14 +75,14 @@ const Circle = ({ onPress, index, quotes, animatedValue, animatedValue2 }) => {
             transform: [
               { perspective: 200 },
               {
-                rotateY: animatedValue2.interpolate({
+                rotateY: myanimatedValue2.interpolate({
                   inputRange: [0, 0.5, 1],
                   outputRange: ['0deg', '-90deg', '-180deg'],
                 }),
               },
 
               {
-                scale: animatedValue2.interpolate({
+                scale: myanimatedValue2.interpolate({
                   inputRange: [0, 0.5, 1],
                   outputRange: [1, 6, 1],
                 }),
@@ -118,31 +94,31 @@ const Circle = ({ onPress, index, quotes, animatedValue, animatedValue2 }) => {
         <TouchableOpacity onPress={onPress}>
           <Animated.View
             style={[
-              styles.button,
+              styles.btn,
               {
                 transform: [
                   {
-                    scale: animatedValue.interpolate({
+                    scale: myanimatedValue.interpolate({
                       inputRange: [0, 0.05, 0.5, 1],
                       outputRange: [1, 0, 0, 1],
                       // extrapolate: "clamp"
                     }),
                   },
                   {
-                    rotateY: animatedValue.interpolate({
+                    rotateY: myanimatedValue.interpolate({
                       inputRange: [0, 0.5, 0.9, 1],
                       outputRange: ['0deg', '180deg', '180deg', '180deg'],
                     }),
                   },
                 ],
-                opacity: animatedValue.interpolate({
+                opacity: myanimatedValue.interpolate({
                   inputRange: [0, 0.05, 0.9, 1],
                   outputRange: [1, 0, 0, 1],
                 }),
               },
             ]}
           >
-            <AnimatedAntDesign name='arrowright' size={35} color={'white'} />
+            <AnimAntDesign name='arrowright' size={35} color={'white'} />
           </Animated.View>
         </TouchableOpacity>
       </Animated.View>
@@ -184,10 +160,10 @@ const colors = [
 ];
 
 export default function MaheshScreen() {
-  const animatedValue = React.useRef(new Animated.Value(0)).current;
-  const animatedValue2 = React.useRef(new Animated.Value(0)).current;
+  const myanimatedValue = React.useRef(new Animated.Value(0)).current;
+  const myanimatedValue2 = React.useRef(new Animated.Value(0)).current;
   const sliderAnimatedValue = React.useRef(new Animated.Value(0)).current;
-  const inputRange = [...Array(quotes.length).keys()];
+  const inputRange = [...Array(myquotes.length).keys()];
   const [index, setIndex] = React.useState(0);
 
   const animate = (i) =>
@@ -197,21 +173,21 @@ export default function MaheshScreen() {
         duration: TEXT_DURATION,
         useNativeDriver: true,
       }),
-      Animated.timing(animatedValue, {
+      Animated.timing(myanimatedValue, {
         toValue: 1,
-        duration: DURATION,
+        duration: TimeDURATION,
         useNativeDriver: true,
       }),
-      Animated.timing(animatedValue2, {
+      Animated.timing(myanimatedValue2, {
         toValue: 1,
-        duration: DURATION,
+        duration: TimeDURATION,
         useNativeDriver: false,
       }),
     ]);
 
   const onPress = () => {
-    animatedValue.setValue(0);
-    animatedValue2.setValue(0);
+    myanimatedValue.setValue(0);
+    myanimatedValue2.setValue(0);
     animate((index + 1) % colors.length).start();
     setIndex((index + 1) % colors.length);
   };
@@ -222,9 +198,9 @@ export default function MaheshScreen() {
       <Circle
         index={index}
         onPress={onPress}
-        quotes={quotes}
-        animatedValue={animatedValue}
-        animatedValue2={animatedValue2}
+        myquotes={myquotes}
+        myanimatedValue={myanimatedValue}
+        myanimatedValue2={myanimatedValue2}
       />
       <Animated.View
         style={{
@@ -233,21 +209,21 @@ export default function MaheshScreen() {
             {
               translateX: sliderAnimatedValue.interpolate({
                 inputRange,
-                outputRange: quotes.map((_, i) => -i * width * 2),
+                outputRange:myquotes.map((_, i) => -i * width * 2),
               }),
             },
           ],
           opacity: sliderAnimatedValue.interpolate({
-            inputRange: [...Array(quotes.length * 2 + 1).keys()].map(
+            inputRange: [...Array(myquotes.length * 2 + 1).keys()].map(
               (i) => i / 2
             ),
-            outputRange: [...Array(quotes.length * 2 + 1).keys()].map((i) =>
+            outputRange: [...Array(myquotes.length * 2 + 1).keys()].map((i) =>
               i % 2 === 0 ? 1 : 0
             ),
           }),
         }}
       >
-        {quotes.slice(0, colors.length).map(({ quote, author }, i) => {
+        {myquotes.slice(0, colors.length).map(({ quote, author }, i) => {
           return (
             <View style={{ paddingRight: width, width: width * 2 }} key={i}>
               <Text
@@ -291,7 +267,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
   },
-  button: {
+  btn: {
     height: 99,
     width: 99,
     borderRadius: 51,
