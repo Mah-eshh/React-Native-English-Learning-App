@@ -1,81 +1,33 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet,TextInput } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
-
-const AboutScreen = ({navigation}) =>{
+export default function App() {
   return (
-    <View style={styles.fj}>
-      <View style={styles.forme}>
-        <Text style={styles.aboutdetails}>
-               
+    <View style={styles.container}>
+       <Image source={logo} style={{ width: 305, height: 159 }} /> 
 
-               
-        </Text> 
-      <View style={styles.email}>
-          <View > 
-          <Text >
-              
-            
-          </Text>
-          <Text >
-            
-            
-          </Text>
-          </View>
-          </View>
-      </View>   
-
-    
-  
-      <View style={styles.backbtn}>
-          <Button 
-                onPress={() => navigation.goBack()}
-                title= "Go back"
-                color='#F99'
-            /> 
-      </View>
-
-
+      <Text style={styles.instructions} >
+        To share a photo from your phone with a friend, just press the button below!
+      </Text>
     </View>
   );
-};
-
-export default AboutScreen;
+}
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    alignContent:'flex-end',
-    justifyContent: 'flex-end',
-  },fj:{
-    backgroundColor:'#4FF',
-    flex:1,
-    alignItems:'center',
-    justifyContent:'center'
-  },backbtn:{
-    //flex:1,
-    padding:10,
-    height:35,
-    width:100,
-  },inputbox:{
-    backgroundColor:'white',
-    width:250,
-    height:35,
-  },aboutdetails:{
-    fontSize:18,
-    color:'#33332E',
-    padding:10,
-    
-  },forme:{
-    padding:40,
-
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  email:{
-    alignItems:'flex-end',
-    //backgroundColor:'red'
-  }
-  
-      
- 
-
+  logo: {
+    width: 305,
+    height: 159,
+    marginBottom: 10,
+  },
+  instructions: {
+    color: '#888',
+    fontSize: 18,
+    marginHorizontal: 15,
+  }, 
 });
