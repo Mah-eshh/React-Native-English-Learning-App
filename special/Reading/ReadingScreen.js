@@ -8,66 +8,55 @@ import { FlingGestureHandler, Directions, State, } from 'react-native-gesture-ha
 const DATA = [
   {
     title: 'Tenses',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+  
     poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/10/12-Tenses-and-36-Example-Sentences.png',
   },
   {
     title: 'Conjunction',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://englishgrammarhere.com/wp-content/uploads/2020/07/20-Sentences-of-Conjunction-Definition-and-Example-Sentences.png',
   },
    {
     title: 'Abbreviations',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://englishgrammarhere.com/wp-content/uploads/2019/07/Internet-Abbreviations-1.png',
   },
 
 
  {
     title: 'Prepositions',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/06/80-Prepositions-List-and-Example-Sentences.png',
   },
 
   {
     title: 'Prepositional phrases',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://englishgrammarhere.com/wp-content/uploads/2020/09/Prepositional-Phrases-List-and-Examples.png',
   },
 
   {
     title: 'Articles A & An',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://i.pinimg.com/originals/1c/d8/54/1cd85446032b9de0d04894d28928c6c2.jpg',
   },
   {
     title: 'Modals',
-    location: 'Sri Lanka',
-    date: 'Feb 18th, 2021',
+
     poster:'https://lessonsforenglish.com/wp-content/uploads/2019/12/Modal-Verbs-of-Permission.png',
   },
   {
     title: 'Using HAVE in English',
-    location: 'Berlin, Germany',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/05/Uses-HAVE-in-English-Positive-Negative-and-Question-Forms.png',
   },
   {
     title: "Using 'Tell'",
-    location: 'Berlin, Germany',
-    date: 'Feb 18th, 2021',
+
     poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/06/Collocations-with-TELL-and-Example-Sentences.png',
   },
    {
     title: "Using 'Time'",
-    location: 'Berlin, Germany',
-    date: 'Feb 18th, 2021',
     poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/06/Collocations-with-TIME-and-Example-Sentences.png',
   },
 ];
@@ -78,7 +67,7 @@ const ITEM_WIDTH = width * 0.76;
 const ITEM_HEIGHT = ITEM_WIDTH * 1.7;
 const VISIBLE_ITEMS = 3;
 
-const OverflowItems = ({ data, scrollXAnimated }) => {
+const Items = ({ data, scrollXAnimated }) => {
   const inputRange = [-1, 0, 1];
   const translateY = scrollXAnimated.interpolate({
     inputRange,
@@ -94,16 +83,6 @@ const OverflowItems = ({ data, scrollXAnimated }) => {
                 {item.title}
               </Text>
               <View style={styles.itemContainerRow}>
-                <Text style={[styles.location]}>
-                  <EvilIcons
-                    name='location'
-                    size={16}
-                    color='black'
-                    style={{ marginRight: 5 }}
-                  />
-                  {item.location}
-                </Text>
-                <Text style={[styles.date]}>{item.date}</Text>
               </View>
             </View>
           );
@@ -166,7 +145,7 @@ export default function ReadingScreen() {
       >
         <SafeAreaView style={styles.container}>
           <StatusBar hidden />
-          <OverflowItems data={data} scrollXAnimated={scrollXAnimated} />
+          <Items data={data} scrollXAnimated={scrollXAnimated} />
           <FlatList
             data={data}
             keyExtractor={(_, index) => String(index)}
@@ -248,26 +227,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: '900',
     textTransform: 'uppercase',
     letterSpacing: -1,
   },
-  location: {
-    fontSize: 16,
-  },
-  date: {
-    fontSize: 12,
-  },
+
   itemContainer: {
     height: OVERFLOW_HEIGHT,
     padding: SPACING * 2,
   },
-  itemContainerRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
+ 
   overflowContainer: {
     height: OVERFLOW_HEIGHT,
     overflow: 'hidden',
