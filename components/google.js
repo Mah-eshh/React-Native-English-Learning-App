@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, Button, Image, TouchableOpacity } from 'react-n
 import firebase from 'firebase';
 import * as Google from 'expo-google-app-auth'; //import
 import { FontAwesome } from '@expo/vector-icons';
-
 class google extends Component {
 
   isUserEqual = (googleUser, firebaseUser) => {
@@ -15,7 +14,6 @@ class google extends Component {
             firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
           providerData[i].uid === googleUser.getBasicProfile().getId()
         ) {
-          // We don't need to reauth the Firebase connection.
           return true;
         }
       }
@@ -24,18 +22,16 @@ class google extends Component {
   };
   onSignIn = googleUser => {
     console.log('Google Auth Response', googleUser);
-    // We need to register an Observer on Firebase Auth to make sure auth is initialized.
     var unsubscribe = firebase.auth().onAuthStateChanged(
       function(firebaseUser) {
         unsubscribe();
-        // Check if we are already signed-in Firebase with the correct user.
+       
         if (!this.isUserEqual(googleUser, firebaseUser)) {
-          // Build Firebase credential with the Google ID token
           var credential = firebase.auth.GoogleAuthProvider.credential(
             googleUser.idToken,
             googleUser.accessToken
           );
-          // Sign in with credential from the Google user.
+        
           firebase
             .auth()
             .signInWithCredential(credential)
@@ -53,7 +49,7 @@ class google extends Component {
                     created_at: Date.now()
                   })
                   .then(function(snapshot) {
-                    // console.log('Snapshot', snapshot);
+                   
                   });
               } else {
                 firebase
@@ -65,14 +61,14 @@ class google extends Component {
               }
             })
             .catch(function(error) {
-              // Handle Errors here.
+             
               var errorCode = error.code;
               var errorMessage = error.message;
-              // The email of the user's account used.
+             
               var email = error.email;
-              // The firebase.auth.AuthCredential type that was used.
+            
               var credential = error.credential;
-              // ...
+            
             });
         } else {
           console.log('User already signed-in Firebase.');
@@ -81,45 +77,7 @@ class google extends Component {
     );
   };
   
-
-//  signInWithFacebookAsync = async () => {
-//   try {
-//     await Facebook.initializeAsync({
-//       appId: '',
-//     });
-//     const {
-//       type,
-//       token,
-//       expirationDate,
-//       permissions,
-//       declinedPermissions,
-//     } = await Facebook.logInWithReadPermissionsAsync({
-//       permissions: ['public_profile'],
-//     });
-//     if (type === 'success') {
-//       // Get the user's name using Facebook's Graph API
-//       const response = await fetch(`https://graph.facebook.com/me?access_token=${token}`);
-//       Alert.alert('Logged in!', `Hi ${(await response.json()).name}!`);
-//     } else {
-//       // type === 'cancel'
-//     }
-//   } catch ({ message }) {
-//     alert(`Facebook Login Error: ${message}`);
-//   }
-// }
-//   render() {
-//     return (
-//       <View style={styles.container}>
-//         <Button
-//           title="Sign In With Facebook"
-//           onPress={() => this.signInWithFacebookAsync()}
-//         />
-//       </View>
-//     );
-//   }
-
-  
-  signInWithGoogleAsync = async () => {
+  signInWithGoog = async () => {
     try {
       const result = await Google.logInAsync({
           // behavior: 'web',
@@ -141,25 +99,25 @@ class google extends Component {
     return (
       <View style={styles.container}>
        <Image
-          style={{ width:"50%", height: 200 }}
+          style={{ width:"50%", height: 220 }}
           source={require('../assets/without.jpg')}
-          resizeMode="contain"
+          resizeMode="contain" 
         />
             <Text style={{ fontSize: 25, fontWeight: 'bold', textAlign: 'center' }} >Social Login in with google</Text>
       <Text>Confirm to Login</Text>
-       <FontAwesome.Button name="google" backgroundColor="#DD4B39" onPress={() => this.signInWithGoogleAsync()}>
-         Login with Google</FontAwesome.Button>
+       <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.signInWithGoog()}>
+         Login with Google   </FontAwesome.Button>
 
             <TouchableOpacity 
           onPress={() => this.props.navigation.navigate("SignUp")}
-          style={{ width: 280, backgroundColor: '#0d47a1', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 30 }}
+          style={{ width: 280, backgroundColor: '#40e0d0', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 50,  borderRadius: 10 }}
           >
           <Text style={{ textAlign: 'center', color: '#fff', fontSize: 16 }}>Back to E-mail Sign Up </Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
         onPress={() => this.props.navigation.navigate("Login")}
-          style={{ width: 280, backgroundColor: '#0d4771', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 30 }}
+          style={{ width: 280, backgroundColor: '#87cefa', padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 40, marginTop: 40 ,  borderRadius: 10}}
           >
           <Text style={{ textAlign: 'center', color: '#fff', fontSize: 16 }}>Back to E-mail Sign In </Text>
         </TouchableOpacity>
