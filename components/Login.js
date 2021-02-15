@@ -13,7 +13,6 @@ export default class Login extends React.Component {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        // AsyncStorage.setItem("key", "I like to save it.");
         this.props.navigation.navigate("AppMain");
       })
       .catch(error => this.setState({ errorMessage: error.message }));
