@@ -6,10 +6,8 @@ import * as Speech from 'expo-speech';
 export default function PronunScreen() {
 
   const speechs = [
-    'hi, this is Text to Voice over',
-    'Can you hear what I am saying?',
-     "I'm Mahesh Abeykoon from Sri Lanka",
-     'this is a simple test from mahesh'
+    'Vehical,pronunciation',
+    
   ];
 
   const [currentSpeech, setCurrentSpeech] = useState({
@@ -20,7 +18,7 @@ export default function PronunScreen() {
 
   textToSpeech = (speech) => {
     Speech.speak(speech, {
-      voice:'com.apple._female_en-US_compact',
+      voice:'google',
       rate:.95,
       onStart:onStartSpeech,
       onDone:onDoneSpeech
@@ -44,10 +42,10 @@ export default function PronunScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={{flex:1, justifyContent:'center', alignItems:'center', backgroundColor:'black', width:'100%'}}>
+      <View style={{flex:1, justifyContent:'center', alignItems:'center', backgroundColor:'#ff69b4', width:'100%'}}>
         <Text style={{color:'white', fontSize:25}}>{currentSpeech.speaking}</Text>
       </View>
-      <TouchableOpacity style={{flex:1, justifyContent:'center', alignItems:'center', width:'100%', backgroundColor:currentSpeech.isStartSpeech ? 'red' : 'green'}} onPress={() => textToSpeech(currentSpeech.speaking)}><Text style={{fontSize:30, fontWeight:'bold', color:'white'}}>{currentSpeech.isStartSpeech ? 'Speaking...' : 'Speak Now'}</Text></TouchableOpacity>
+      <TouchableOpacity style={{flex:1, justifyContent:'center', alignItems:'center', width:'100%', backgroundColor:currentSpeech.isStartSpeech ? '#ff69b4' : '#1e90ff'}} onPress={() => textToSpeech(currentSpeech.speaking)}><Text style={{fontSize:30, fontWeight:'bold', color:'white'}}>{currentSpeech.isStartSpeech ? 'Speaking...' : 'Speak Now'}</Text></TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -57,7 +55,7 @@ export default function PronunScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#708090',
     alignItems: 'center',
     justifyContent: 'center',
   },

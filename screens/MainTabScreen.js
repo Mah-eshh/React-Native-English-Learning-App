@@ -179,7 +179,6 @@ const SpeakingStackPractice = ({navigation}) => (
         }} />
 </SpeakingStack.Navigator>
 
-
 );
 
 

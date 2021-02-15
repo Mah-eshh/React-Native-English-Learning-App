@@ -53,7 +53,7 @@ export function DrawerContent(props) {
                                 name="format-text" 
                                 color={color}
                                 size={30}
-                                />
+                                /> 
                             )}
                             label="Basics of Tenses"
                             onPress={() => {props.navigation.navigate('TensesScreen')}}
