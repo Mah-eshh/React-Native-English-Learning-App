@@ -73,26 +73,12 @@ export default class SignUp extends React.Component {
           <Text style={{ textAlign: 'center', color: '#000080', fontSize: 17 }}>Have an account? Sign in </Text>
         </TouchableOpacity>
         
-         {/* <Button
-          title="Sign In With Google"
-          onPress={() => this.props.navigation.navigate("google")}
-        /> */}
           <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.props.navigation.navigate("google")}>
          Login with Google    </FontAwesome.Button>
-
-     {/* <Icon.Button name="google"backgroundColor="#DD4B39" 
-        style={{padding: 15}}>
-        Login with Google
-      </Icon.Button> */}
       
      <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebook")}>
          Login with Facebook </FontAwesome.Button>
 
-        {/* <Button
-          title="Login via OTP"
-          onPress={() => this.props.navigation.navigate("Otp")}
-        /> 
-         */}
          
       </View>
     );

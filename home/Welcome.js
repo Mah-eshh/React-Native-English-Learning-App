@@ -1,38 +1,38 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Animated } from 'react-native';
 class Welcome extends React.Component {
-  animatedValues = [];
+  animateValues = [];
   animations = [];
   constructor(props) {
     super(props);
 
     const textArr = props.content.trim().split(' ');
     textArr.forEach((_, i) => {
-      this.animatedValues[i] = new Animated.Value(0);
+      this.animateValues[i] = new Animated.Value(0);
     });
     this.textArr = textArr;
   }
 
   componentDidMount() {
-    this.animate(1);
+    this.myanimate(1);
   }
 
   componentWillUnmount() {
-    this.animate(0)
+    this.myanimate(0)
   }
 
-  animate(toValue = 5) {
+  myanimate(toValue = 5) {
     this.toValue = toValue
-    this.animations = this.textArr.map((_, i) => {
-      return Animated.timing(this.animatedValues[i], {
+    this.animation = this.textArr.map((_, i) => {
+      return Animated.timing(this.animateValues[i], {
         toValue,
         duration: this.props.duration,
         useNativeDriver: true
 
       });
     });
-    Animated.stagger(this.props.timing / 5, toValue === 0 ? this.animations.reverse() : this.animations).start(() => {
-      setTimeout(() => this.animate(toValue === 0 ? 1 : 0), 1000)
+    Animated.stagger(this.props.timing / 5, toValue === 0 ? this.animation.reverse() : this.animation).start(() => {
+      setTimeout(() => this.myanimate(toValue === 0 ? 1 : 0), 1000)
       if (this.props.onFinish) {
         this.props.onFinish(toValue === 1);
         
@@ -50,11 +50,11 @@ render() {
                 this.props.textStyle,
                 styles.textStyle,
                 {
-                  opacity: this.animatedValues[index],
+                  opacity: this.animateValues[index],
                   transform: [
                     {
                       translateY: Animated.multiply(
-                        this.animatedValues[index],
+                        this.animateValues[index],
                         new Animated.Value(-2)
                       ),
                     },
