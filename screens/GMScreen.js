@@ -159,7 +159,6 @@ She was boring in the class.
       />
     </View>
     <Separator />
-   
     
     <View>
       <Text style={styles.title}>
