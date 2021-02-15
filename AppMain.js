@@ -10,7 +10,7 @@ import SupportScreen from './screens/SupportScreen';
 import  GMScreen from './screens/GMScreen';
 
 // import  DicScreen from './Dictionary/DicScreen';
-import AbeykoonScreen from './screens/AbeykoonScreen';
+import PronunScreen from './screens/PronunScreen';
 
 // import ChattingRoom from './chat/ChattingRoom';
 import MusicsScreen from './screens/MusicsScreen';
@@ -25,7 +25,9 @@ import SpeakingPractice from './timer/SpeakingPractice';
 // import myShare from './screens/myShare';
 import WebBrowserScreen from './drawer/web/WebBrowserScreen';
 import PDFScreen from './drawer/web/PDFScreen';
-import ProfileScreen from './screens/ProfileScreen';
+import AboutScreen from './screens/AboutScreen';
+import DetailsScreen from './screens/DetailsScreen';
+
 import * as firebase from "firebase";
 const Drawer = createDrawerNavigator();
 
@@ -43,7 +45,7 @@ const AppMain = () => {
 
           <Drawer.Screen name="GMScreen" component={GMScreen} />
           {/* <Drawer.Screen name="DicScreen" component={DicScreen} /> */}
-          <Drawer.Screen name="AbeykoonScreen" component={AbeykoonScreen}/>
+          <Drawer.Screen name="PronunScreen" component={PronunScreen}/>
           {/* <Drawer.Screen name="ChattingRoom" component={ChattingRoom} /> */}
           <Drawer.Screen name="MusicsScreen" component={MusicsScreen} />
           <Drawer.Screen name="ListeningScreen" component={ListeningScreen}/>
@@ -53,7 +55,9 @@ const AppMain = () => {
            {/* <Drawer.Screen name="myShare" component={myShare}/> */}
              <Drawer.Screen name="WebBrowserScreen" component={WebBrowserScreen}/>
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
-              <Drawer.Screen name="ProfileScreen" component={ProfileScreen}/>
+              <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
+              <Drawer.Screen name="DetailsScreen" component={DetailsScreen}/>
+              
 
       </Drawer.Navigator>      
     </NavigationContainer>

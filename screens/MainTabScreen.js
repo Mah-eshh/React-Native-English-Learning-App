@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../home/HomeScreen';
 import DetailsScreen from './DetailsScreen';
 import ReadingScreen from '../special/Reading/ReadingScreen';
-import AbeykoonScreen from './AbeykoonScreen';
+// import AbeykoonScreen from './AbeykoonScreen';
 import ListeningScreen from '../drawer/listing/ListeningScreen';
 import WritingScreen from '../drawer/notepad/WritingScreen';
 import SpeakingPractice from '../timer/SpeakingPractice';
@@ -178,7 +178,6 @@ const SpeakingStackPractice = ({navigation}) => (
         )
         }} />
 </SpeakingStack.Navigator>
-
 
 );
 

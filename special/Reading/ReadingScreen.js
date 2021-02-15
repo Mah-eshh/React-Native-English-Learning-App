@@ -271,6 +271,7 @@ const styles = StyleSheet.create({
   overflowContainer: {
     height: OVERFLOW_HEIGHT,
     overflow: 'hidden',
+   
   },
 });
 

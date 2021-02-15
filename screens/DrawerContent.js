@@ -23,18 +23,18 @@ export function DrawerContent(props) {
                                 size={70}/>
                             <View style={{marginLeft:15, flexDirection:'column'}}>
                                 <Title style={styles.title}>Smart English App</Title>
-                                <Caption style={styles.caption}>@created by _maheSh</Caption>
+                                <Caption style={styles.cap}>@created by -maheSh</Caption>
                             </View>
                         </View>
 
                         <View style={styles.row}>
                             <View style={styles.section}>
                                 <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.caption}>Following</Caption>
+                                <Caption style={styles.cap}>Following</Caption>
                             </View>
                             <View style={styles.section}>
                                 <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.caption}>Followers</Caption>
+                                <Caption style={styles.cap}>Followers</Caption>
                             </View>
                         </View>
                     </View>
@@ -53,7 +53,7 @@ export function DrawerContent(props) {
                                 name="format-text" 
                                 color={color}
                                 size={30}
-                                />
+                                /> 
                             )}
                             label="Basics of Tenses"
                             onPress={() => {props.navigation.navigate('TensesScreen')}}
@@ -80,17 +80,13 @@ export function DrawerContent(props) {
                             label="Basic English Phrases"
                             onPress={() => {props.navigation.navigate('PhrasesScreen')}}
                         />
-                          {/* <DrawerItem 
+                          <DrawerItem 
                             icon={({color, size}) => (
-                                <Icon 
-                                name="Abeykoon-outline" 
-                                color={color}
-                                size={size}
-                                />
+                            <MaterialCommunityIcons name="account-tie-voice" size={30} color="black" />
                             )}
-                            label="Abeykoon"
-                            onPress={() => {props.navigation.navigate('AbeykoonScreen')}}
-                        /> */}
+                            label="Accurate Pronunciation"
+                            onPress={() => {props.navigation.navigate('PronunScreen')}}
+                        />
                         
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -149,6 +145,7 @@ export function DrawerContent(props) {
                             label="Share this."
                             onPress={() => {props.navigation.navigate('myShare')}}
                         /> */}
+                        
                             <DrawerItem 
                             icon={({color, size}) => (
                               <Entypo name="globe" size={30} color="black" />
@@ -175,7 +172,14 @@ export function DrawerContent(props) {
                                 <FontAwesome5 name="medium" size={30} color="black" />
                             )}
                             label="About us"
-                            onPress={() => {props.navigation.navigate('ProfileScreen')}}
+                            onPress={() => {props.navigation.navigate('AboutScreen')}}
+                        />
+                           <DrawerItem 
+                            icon={({color, size}) => (
+                                <FontAwesome5 name="medium" size={30} color="black" />
+                            )}
+                            label="About us"
+                            onPress={() => {props.navigation.navigate('DetailsScreen')}}
                         />
 
                     </Drawer.Section>
@@ -208,16 +212,18 @@ export function DrawerContent(props) {
 const styles = StyleSheet.create({
     drawerContent: {
       flex: 1,
+      backgroundColor:'#f0f8ff',
+
     },
     userInfoSection: {
-      paddingLeft: 20,
+      paddingLeft: 18,
     },
     title: {
-      fontSize: 16,
+      fontSize: 15,
       marginTop: 3,
       fontWeight: 'bold',
     },
-    caption: {
+    cap: {
       fontSize: 14,
       lineHeight: 14,
     },
@@ -236,12 +242,13 @@ const styles = StyleSheet.create({
       marginRight: 3,
     },
     drawerSection: {
-      marginTop: 15,
+      marginTop: 1,
     },
     bottomDrawerSection: {
-        marginBottom: 15,
+        marginBottom: 0,
         borderTopColor: '#f4f4f4',
-        borderTopWidth: 1
+        borderTopWidth: 2,
+        backgroundColor: '#87cefa'
     },
     preference: {
       flexDirection: 'row',

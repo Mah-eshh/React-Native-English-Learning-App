@@ -15,6 +15,10 @@ export default class WebBrowserScreen extends Component {
          <FontAwesome.Button name="google" backgroundColor="#6495ed" 
         onPress={this.Google}>
          Google Translate </FontAwesome.Button>
+
+         <FontAwesome.Button name="google" backgroundColor="#6495ed" 
+        onPress={this.Google}>
+         Oxford Dictionary </FontAwesome.Button>
          
        <FontAwesome.Button name="youtube" backgroundColor="red" 
           onPress={this.YouTubeDrama}>
@@ -45,7 +49,7 @@ export default class WebBrowserScreen extends Component {
     Linking.openURL('https://www.youtube.com/');
   };
   YouTubeDrama = () => {
-    Linking.openURL('https://www.youtube.com/');
+    Linking.openURL('https://www.youtube.com/'); 
   };
   YouTubeSong = () => {
     Linking.openURL('https://www.youtube.com/');
@@ -60,6 +64,9 @@ export default class WebBrowserScreen extends Component {
   
     Google = () => {
     WebBrowser.openBrowserAsync('https://translate.google.com/?hl=en');
+  };
+  oxford = () => {
+    WebBrowser.openBrowserAsync('https://www.oxfordlearnersdictionaries.com/');
   };
 }
 
