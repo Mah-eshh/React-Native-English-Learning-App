@@ -145,6 +145,7 @@ export function DrawerContent(props) {
                             label="Share this."
                             onPress={() => {props.navigation.navigate('myShare')}}
                         /> */}
+                        
                             <DrawerItem 
                             icon={({color, size}) => (
                               <Entypo name="globe" size={30} color="black" />
@@ -256,5 +257,4 @@ const styles = StyleSheet.create({
       paddingHorizontal: 16,
     },
   });
-  
   
