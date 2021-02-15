@@ -22,7 +22,6 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import AppMain from "./AppMain";
 import google from "./components/google";
-import Otp from "./components/Phone/Otp";   // not work yet 
 import facebook from './components/facebook';
 
 // create our app's navigation stack
@@ -33,7 +32,7 @@ const RootStack = createSwitchNavigator(
     SignUp: SignUp,
     AppMain: AppMain,
     google: google,
-    Otp: Otp,
+
     facebook:facebook
   },
   {
