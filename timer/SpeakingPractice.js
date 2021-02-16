@@ -17,9 +17,10 @@ const styles=StyleSheet.create({
   counter:{
     flexDirection:'row',
     margin:10,
+   
     justifyContent: 'center',
   },
-  buttonPanel:{
+  btnPanel:{
     flexDirection:'row',
     justifyContent:'center',
   },
@@ -41,7 +42,7 @@ const styles=StyleSheet.create({
   },
   timeselector:{
     flexDirection:'row',
-    height:150,
+    height:100,
     width:50,
     borderColor:"#000000"
   },
@@ -159,12 +160,10 @@ export class MainTimer extends React.Component{
   render(){
     return(
       <View style={styles.main}>
-      
-      <View style={styles.buttonPanel}>
+      <View style={styles.btnPanel}>
       <TouchableOpacity style={styles.btn} onPress={()=>this.start()}><Text style={styles.btntext}>Start</Text></TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={()=>this.stop()}><Text style={styles.btntext}>Stop</Text></TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={()=>this.reset()}><Text style={styles.btntext}>Reset</Text></TouchableOpacity>
-      
       
       </View>
       <View style={styles.counter}>
