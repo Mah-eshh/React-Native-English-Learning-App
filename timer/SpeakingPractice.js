@@ -17,13 +17,14 @@ const styles=StyleSheet.create({
   counter:{
     flexDirection:'row',
     margin:10,
+   
     justifyContent: 'center',
   },
-  buttonPanel:{
+  btnPanel:{
     flexDirection:'row',
     justifyContent:'center',
   },
-  button:{
+  btn:{
     backgroundColor: '#4682b4',
     margin: 10,
     width:70,
@@ -32,7 +33,7 @@ const styles=StyleSheet.create({
     alignItems:"center",
     borderRadius:5,
   },
-  buttontext:{
+  btntext:{
     color:"#fff",
     
   },
@@ -41,7 +42,7 @@ const styles=StyleSheet.create({
   },
   timeselector:{
     flexDirection:'row',
-    height:150,
+    height:100,
     width:50,
     borderColor:"#000000"
   },
@@ -159,12 +160,10 @@ export class MainTimer extends React.Component{
   render(){
     return(
       <View style={styles.main}>
-      
-      <View style={styles.buttonPanel}>
-      <TouchableOpacity style={styles.button} onPress={()=>this.start()}><Text style={styles.buttontext}>Start</Text></TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={()=>this.stop()}><Text style={styles.buttontext}>Stop</Text></TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={()=>this.reset()}><Text style={styles.buttontext}>Reset</Text></TouchableOpacity>
-      
+      <View style={styles.btnPanel}>
+      <TouchableOpacity style={styles.btn} onPress={()=>this.start()}><Text style={styles.btntext}>Start</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={()=>this.stop()}><Text style={styles.btntext}>Stop</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={()=>this.reset()}><Text style={styles.btntext}>Reset</Text></TouchableOpacity>
       
       </View>
       <View style={styles.counter}>
@@ -219,14 +218,15 @@ export default class SpeakingPractice extends React.Component{
     if(!this.state.timeselected){
       return(
         <View style={styles.main}>
-        <Text style={{ fontSize: 45, fontWeight: '300', textAlign: 'center'}} >Time App</Text>
+        <Text style={{ fontSize: 45,padding: -5, fontWeight: '300', justifyContent:'flex-start', textAlign: 'center'}} >Time App</Text>
+   
           <View style={{flexDirection:'row',justifyContent:'center', marginBottom:40}}>
            
            <Text style={{fontSize:20}}>Select Time</Text>
           </View>
 
             <View style={{flexDirection:'row',height:100,width:windowWidth,justifyContent:"center"}}>
-                        <View style={{marginRight:10}}>
+                        <View style={{marginRight:25}}>
                         <Text style={{justifyContent:'center',fontSize:20}}>Minutes</Text>
                         <ScrollView >
                         {
@@ -252,8 +252,11 @@ export default class SpeakingPractice extends React.Component{
             </View>
 
         <View style={{margin:10,flexDirection:'row',justifyContent:'center'}}>
-        <TouchableOpacity onPress={()=>this.re()} style={styles.button}><Text>Go</Text></TouchableOpacity>
+        <TouchableOpacity onPress={()=>this.re()} style={styles.btn}><Text>Go</Text></TouchableOpacity>
+        
         </View>
+              <Text style={{ fontSize: 11, fontWeight: '300', color:'#0000cd', textAlign: 'center'}} >  Here you can Improve your Spoken English skills without a Speaking partner </Text>
+              <Text style={{ fontSize: 11, fontWeight: '300', color:'#0000cd', textAlign: 'center'}} >  So you have to talk in English with yourself </Text>
         </View>
       )
     }
@@ -261,8 +264,8 @@ export default class SpeakingPractice extends React.Component{
       return(
         <View>
         <MainTimer mins={this.state.minutes} secs={this.state.seconds}/>
-        <TouchableOpacity onPress={()=>this.re()} style={[styles.button,{position:'absolute',top:windowHeight-80,width:windowWidth-20}]}>
-        <Text style={styles.buttontext}>Back</Text>
+        <TouchableOpacity onPress={()=>this.re()} style={[styles.btn,{position:'absolute',top:windowHeight-80,width:windowWidth-20}]}>
+        <Text style={styles.btntext}>Back</Text>  
         </TouchableOpacity>
         </View>
     )

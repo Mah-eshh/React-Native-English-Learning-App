@@ -6,11 +6,11 @@ export default class WritingScreen extends React.Component {
       return (
         <View key={this.props.mahesh} style={styles.note}>
 
-            <Text style={styles.noteText}>{this.props.val.date}</Text>
-            <Text style={styles.noteText}>{this.props.val.note}</Text>
+            <Text style={styles.noteT}>{this.props.val.date}</Text>
+            <Text style={styles.noteT}>{this.props.val.note}</Text>
 
-            <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
-                <Text style={styles.noteDeleteText}>X</Text>
+            <TouchableOpacity onPress={this.props.deleteMethod} style={styles.Delete}>
+                <Text style={styles.noteDeleteT}>X</Text>
             </TouchableOpacity>
 
         </View>
@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
       borderBottomWidth: 2,
       borderBottomColor: '#ededed',
     },
-    noteText:{
+    noteT:{
       paddingLeft: 20,
       borderLeftWidth: 10,
       borderLeftColor: '#40e0d0',
     },
-    noteDelete:{
+    Delete:{
       position: 'absolute',
       justifyContent: 'center',
       alignItems: 'center',
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
       bottom: 10,
       right: 10,
     },
-    noteDeleteText:{
+    noteDeleteT:{
       color: 'white',
     }
     
