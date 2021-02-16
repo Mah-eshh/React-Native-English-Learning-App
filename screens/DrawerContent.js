@@ -153,13 +153,6 @@ export function DrawerContent(props) {
                             label="About us"
                             onPress={() => {props.navigation.navigate('AboutScreen')}}
                         />
-                           <DrawerItem 
-                            icon={({color, size}) => (
-                                <FontAwesome5 name="medium" size={30} color="black" />
-                            )}
-                            label="About us"
-                            onPress={() => {props.navigation.navigate('DetailsScreen')}}
-                        />
 
                     </Drawer.Section>
 

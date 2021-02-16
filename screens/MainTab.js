@@ -3,9 +3,9 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../home/HomeScreen';
-import DetailsScreen from './DetailsScreen';
+
 import ReadingScreen from '../special/Reading/ReadingScreen';
-// import AbeykoonScreen from './AbeykoonScreen';
+
 import ListeningScreen from '../drawer/listing/ListeningScreen';
 import WritingScreen from '../drawer/notepad/WritingScreen';
 import SpeakingPractice from '../timer/SpeakingPractice';
@@ -18,7 +18,7 @@ const WritingStack = createStackNavigator();
 const SpeakingStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
-const MainTabScreen = () => (
+const MainTab = () => (
     <Tab.Navigator
       initialRouteName="Home"
       activeColor="#fff"
@@ -83,7 +83,7 @@ const MainTabScreen = () => (
     
 );
 
-export default MainTabScreen;
+export default MainTab;
 
 const HomeStackScreen = ({navigation}) => (
 <HomeStack.Navigator screenOptions={{

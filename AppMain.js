@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContent } from './screens/DrawerContent';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import MainTabScreen from './screens/MainTabScreen'; 
+import MainTab from './screens/MainTab'; 
 import SupportScreen from './screens/SupportScreen';
 
 import MusicsScreen from './screens/MusicsScreen';
@@ -20,7 +20,7 @@ import SpeakingPractice from './timer/SpeakingPractice';
 import WebBrowserScreen from './drawer/web/WebBrowserScreen';
 import PDFScreen from './drawer/web/PDFScreen';
 import AboutScreen from './screens/AboutScreen';
-import DetailsScreen from './screens/DetailsScreen';
+
 
 import * as firebase from "firebase";
 const Drawer = createDrawerNavigator();
@@ -30,7 +30,7 @@ const AppMain = () => {
     <NavigationContainer> 
  
      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-        <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+        <Drawer.Screen name="HomeDrawer" component={MainTab} />
         
          <Drawer.Screen name="TensesScreen" component={TensesScreen}/>
           <Drawer.Screen name="SupportScreen" component={SupportScreen}/>
@@ -50,7 +50,7 @@ const AppMain = () => {
              <Drawer.Screen name="WebBrowserScreen" component={WebBrowserScreen}/>
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
               <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
-              <Drawer.Screen name="DetailsScreen" component={DetailsScreen}/>
+
               
 
       </Drawer.Navigator>      
