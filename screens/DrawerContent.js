@@ -54,13 +54,7 @@ export function DrawerContent(props) {
                             label="Basics of Tenses"
                             onPress={() => {props.navigation.navigate('TensesScreen')}}
                         />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                              <MaterialIcons name="error" size={30} color="black" />
-                            )}
-                            label="common English mistakes"
-                            onPress={() => {props.navigation.navigate('GMScreen')}}
-                        />
+                    
                         <DrawerItem 
                             icon={({color, size}) => (
                               <Entypo name="book" size={30} color="black" />
