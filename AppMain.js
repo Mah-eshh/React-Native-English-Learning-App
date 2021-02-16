@@ -7,9 +7,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import MainTabScreen from './screens/MainTabScreen'; 
 import SupportScreen from './screens/SupportScreen';
 
-import  GMScreen from './screens/GMScreen';
-
-
 import MusicsScreen from './screens/MusicsScreen';
 
 import TensesScreen from './drawer/tenses/TensesScreen';
@@ -40,7 +37,7 @@ const AppMain = () => {
           <Drawer.Screen name="PhrasesScreen" component={PhrasesScreen}/>
           <Drawer.Screen name="MaheshScreen" component={MaheshScreen} />
 
-          <Drawer.Screen name="GMScreen" component={GMScreen} />
+         
          
       
       

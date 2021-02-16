@@ -23,20 +23,9 @@ export function DrawerContent(props) {
                                 size={70}/>
                             <View style={{marginLeft:15, flexDirection:'column'}}>
                                 <Title style={styles.title}>Smart English App</Title>
-                                <Caption style={styles.cap}>@created by -maheSh</Caption>
+                                <Caption style={styles.cap}>                  @maheSh</Caption>
                             </View>
-                        </View>
-
-                        <View style={styles.row}>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.cap}>Following</Caption>
-                            </View>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.cap}>Followers</Caption>
-                            </View>
-                        </View>
+                        </View>    
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
@@ -49,25 +38,19 @@ export function DrawerContent(props) {
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
-                               <MaterialCommunityIcons name="book-open-page-variant" size={30} color="black" />
+                             <MaterialCommunityIcons name="human-handsup" size={30} color="black" />
                             )}
-                            label="Basics of Tenses"
-                            onPress={() => {props.navigation.navigate('TensesScreen')}}
-                        />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                              <MaterialIcons name="error" size={30} color="black" />
-                            )}
-                            label="common English mistakes"
-                            onPress={() => {props.navigation.navigate('GMScreen')}}
-                        />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                              <Entypo name="book" size={30} color="black" />
-                            )}
-                            label="Become Fluent in English"
+                            label="Become Fluent"
                             onPress={() => {props.navigation.navigate('MaheshScreen')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                               <MaterialCommunityIcons name="book-open-page-variant" size={30} color="black" />
+                            )}
+                            label="12 Types of Tenses"
+                            onPress={() => {props.navigation.navigate('TensesScreen')}}
+                        />
+                    
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <AntDesign name="dribbble-square" size={30} color="black" />
@@ -238,7 +221,7 @@ const styles = StyleSheet.create({
       marginRight: 3,
     },
     drawerSection: {
-      marginTop: 1,
+      marginTop: 10,
     },
     bottomDrawerSection: {
         marginBottom: 0,
@@ -246,11 +229,11 @@ const styles = StyleSheet.create({
         borderTopWidth: 2,
         backgroundColor: '#87cefa'
     },
-    preference: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingVertical: 12,
-      paddingHorizontal: 16,
-    },
+    // preference: {
+    //   flexDirection: 'row',
+    //   justifyContent: 'space-between',
+    //   paddingVertical: 12,
+    //   paddingHorizontal: 16,
+    // },
   });
   
