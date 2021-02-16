@@ -58,7 +58,7 @@ export function DrawerContent(props) {
                     
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <AntDesign name="dribbble-square" size={30} color="black" />
+                                <MaterialIcons name="menu-book" size={30} color="black" />
                                
                             )}
                             label="Basic English Phrases"
@@ -157,13 +157,6 @@ export function DrawerContent(props) {
                             )}
                             label="About us"
                             onPress={() => {props.navigation.navigate('AboutScreen')}}
-                        />
-                           <DrawerItem 
-                            icon={({color, size}) => (
-                                <FontAwesome5 name="medium" size={30} color="black" />
-                            )}
-                            label="About us"
-                            onPress={() => {props.navigation.navigate('DetailsScreen')}}
                         />
 
                     </Drawer.Section>
