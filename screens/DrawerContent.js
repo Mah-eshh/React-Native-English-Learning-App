@@ -25,9 +25,7 @@ export function DrawerContent(props) {
                                 <Title style={styles.title}>Smart English App</Title>
                                 <Caption style={styles.cap}>                  @maheSh</Caption>
                             </View>
-                        </View>
-
-                      
+                        </View>    
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
@@ -231,11 +229,11 @@ const styles = StyleSheet.create({
         borderTopWidth: 2,
         backgroundColor: '#87cefa'
     },
-    preference: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      paddingVertical: 12,
-      paddingHorizontal: 16,
-    },
+    // preference: {
+    //   flexDirection: 'row',
+    //   justifyContent: 'space-between',
+    //   paddingVertical: 12,
+    //   paddingHorizontal: 16,
+    // },
   });
   
