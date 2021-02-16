@@ -221,14 +221,11 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       marginRight: 15,
     },
-    paragraph: {
+    myparagraph: {
       fontWeight: 'bold',
       marginRight: 3,
     },
-    drawerSection: {
-      marginTop: 10,
-    },
-    DrawerSection: {
+    mydrawerSection: {
         marginBottom: 0,
         borderTopColor: '#f4f4f4',
         borderTopWidth: 2,
