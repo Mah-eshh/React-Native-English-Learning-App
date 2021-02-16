@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
       marginRight: 3,
     },
     drawerSection: {
-      marginTop: 1,
+      marginTop: 10,
     },
     bottomDrawerSection: {
         marginBottom: 0,
