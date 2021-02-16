@@ -21,17 +21,17 @@ export default class WritingScreen extends React.Component {
         <View style={styles.container}>
 
             <View style={styles.header}>
-                <Text style={styles.headerText}>- MY NOTES -</Text>
+                <Text style={styles.headerT}>- MY NOTES -</Text>
             </View>
 
             <ScrollView style={styles.scrollContainer}>
                 {notes}
             </ScrollView>
 
-            <View style={styles.footer}>
+            <View style={styles.footerr}>
 
-                <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButtom}>
-                    <Text style={styles.addButtomText}>+</Text>
+                <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.Buttom}>
+                    <Text style={styles.ButtomText}>+</Text>
                 </TouchableOpacity>
 
                 <TextInput style={styles.textInput}
@@ -68,13 +68,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header:{
-    backgroundColor: '#66cdaa',
+    backgroundColor: '#87cefa',
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomWidth: 10,
-    borderBottomColor: '#ddd',
+   
   },
-  headerText:{
+  headerT:{
     color: '#010b65',
     fontSize: 18,
     padding: 26,
@@ -83,18 +82,18 @@ const styles = StyleSheet.create({
     flex: 1,
     marginBottom: 100,
   },
-  footer:{
+  footerr:{
     position: 'absolute',
     alignItems: 'center',
     bottom: 0,
     left: 0,
     right: 0,
   },
-  addButtom:{
-    backgroundColor: '#66cdaa',
+  Buttom:{
+    backgroundColor: '#dda0dd',
     width: 80,
     height: 80,
-    borderRadius: 40,
+    borderRadius: 50,
     borderBottomColor: '#ccc',
     alignItems: 'center',
     justifyContent: 'center',
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
     marginBottom: -45, 
     zIndex: 10,
   },
-  addButtomText:{
+  ButtomText:{
     color: '#010b65',
     fontSize: 24,
   },
@@ -110,8 +109,8 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     color: '#fff',
     padding: 20,
-    paddingTop: 66,
-    backgroundColor: '#708090',
+    paddingTop: 76,
+    backgroundColor: '#4682b4',
     borderTopWidth: 2,
     borderTopColor: '#010b65',
   },
