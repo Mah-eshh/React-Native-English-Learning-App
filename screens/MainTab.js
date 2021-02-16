@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../home/HomeScreen';
 
 import ReadingScreen from '../special/Reading/ReadingScreen';
-
 import ListeningScreen from '../drawer/listing/ListeningScreen';
 import WritingScreen from '../drawer/notepad/WritingScreen';
 import SpeakingPractice from '../timer/SpeakingPractice';
@@ -30,7 +29,7 @@ const MainTab = () => (
           tabBarLabel: 'Home',
           tabBarColor: '#0096ff',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-home" color={color} size={26} />
+            <Icon name="ios-home" color={'#87ceeb'} size={26} />
           ),
         }}
       />
@@ -61,7 +60,7 @@ const MainTab = () => (
         component={WritingStackScreen}
         options={{
           tabBarLabel: 'Wirting',
-          tabBarColor: '#008080',
+          tabBarColor: '#708090',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-pencil" color={color} size={26} />
           ),
@@ -90,7 +89,7 @@ const HomeStackScreen = ({navigation}) => (
         headerStyle: {
         backgroundColor: '#0096ff',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#faebd7',
         headerTitleStyle: {
         fontWeight: 'bold'
         }
@@ -110,7 +109,7 @@ const ListeningStackScreen = ({navigation}) => (
         headerStyle: {
         backgroundColor: '#1f65ff',
         },
-        headerTintColor: '#fff', 
+        headerTintColor: '#f0f8ff', 
         headerTitleStyle: {
         fontWeight: 'bold'
         }
@@ -146,9 +145,9 @@ const ReadingStackScreen = ({navigation}) => (
 const WritingStackScreen = ({navigation}) => (
 <WritingStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#008080',
+        backgroundColor: '#708090',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#87ceeb',
         headerTitleStyle: {
         fontWeight: 'bold'
         }
@@ -156,7 +155,7 @@ const WritingStackScreen = ({navigation}) => (
         <WritingStack.Screen name="pro2" component={WritingScreen} options={{
         title:'WRITING',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#008080" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#708090" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </WritingStack.Navigator>
@@ -167,7 +166,7 @@ const SpeakingStackPractice = ({navigation}) => (
         headerStyle: {
         backgroundColor: '#c71585',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#b0c4de',
         headerTitleStyle: {
         fontWeight: 'bold'
         }
