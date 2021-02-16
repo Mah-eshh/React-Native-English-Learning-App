@@ -9,7 +9,7 @@ export default class WebBrowserScreen extends Component {
     return (
       <View style={styles.container}>
        <FontAwesome.Button name="youtube" 
-          onPress={this.YouTube} style={{ width: 120, backgroundColor: '#ff0000', alignItems: 'center', justifyContent: 'flex-start' }}>
+          onPress={this.YouTube} style={{ width: 220, backgroundColor: '#ff0000', alignItems: 'center', justifyContent: 'center' }}>
             Youtube</FontAwesome.Button> 
          
          <FontAwesome.Button name="google" backgroundColor="#6495ed" 
@@ -17,7 +17,7 @@ export default class WebBrowserScreen extends Component {
          Google Translate </FontAwesome.Button>
 
          <FontAwesome.Button name="search" 
-        onPress={this.Google} style={{ width: 220, backgroundColor: '#f08080', alignItems: 'center', justifyContent: 'center' }}>
+        onPress={this.Google} style={{ width: 220, backgroundColor: '#20b2aa', alignItems: 'center', justifyContent: 'center' }}>
          Oxford Dictionary </FontAwesome.Button>
          
        <FontAwesome.Button name="youtube" backgroundColor="red" 
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#87cefa',
+    backgroundColor: '#d3d3d3',
   },
   button: {
     marginVertical: 10,
