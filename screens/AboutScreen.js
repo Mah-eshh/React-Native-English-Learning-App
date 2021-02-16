@@ -21,7 +21,7 @@ export default function AboutScreen() {
      <View>
      
   <Text style ={styles.textContact}>
-     Contact Us 👀</Text>
+     Contact Us </Text>
      <Text style ={styles.textContact2}>
      If  you  have  any  questions  or suggestions  about  my  app   do not  hesitate  to contact me at </Text>
       </View> 
