@@ -1,11 +1,11 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import logo from '../assets/mylo.png'
+import logo from '../assets/myLog1.png'
 export default function AboutScreen() {
   return (
     <View style={styles.container}>
        <Image source={logo} style={{ width: 100, height: 100 }} /> 
-<Text style={styles.Feature}> Smart English Learning App </Text>
+<Text style={styles.app}> Smart English Learning App </Text>
           
       <Text style={styles.instructions} >
     Smart   English  learning  app  brings  together  all of  your  favourite  lessons and  presenters in  one fantastic, simple-to-use package. It's the best way to keep your English up to date!
@@ -21,12 +21,14 @@ export default function AboutScreen() {
      <View>
      
   <Text style ={styles.textContact}>
-     Find me</Text>
-    
+     Contact Us 👀</Text>
+     <Text style ={styles.textContact2}>
+     If  you  have  any  questions  or suggestions  about  my  app   do not  hesitate  to contact me at </Text>
+      </View> 
 
-      <Text style ={styles.txt}>
-      maheshpabeykoon@gmail.com</Text>
-      </View>
+      <Text style ={styles.email}>
+      🔵 maheshpabeykoon@gmail.com</Text>
+     
     </View>
   );
 }
@@ -50,21 +52,17 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     // alignItems:'flex-start'
   }, 
-  txt: {
-    color:'red',
-    padding:5,
-    
-  },
-  textContact:{
-    color:'blue',
-    fontSize:20,
-    padding:10
-    
-
-  },
   Feature:{
     color:'#000080',
-    fontSize: 15,
+    fontSize: 16,
+    padding:10,
+    alignItems:'flex-start',
+    justifyContent:"flex-start",
+    marginHorizontal: 15,
+  },
+    app:{
+    color:'#40e0d0',
+    fontSize: 18,
     padding:10,
     alignItems:'flex-start',
     justifyContent:"flex-start",
@@ -75,7 +73,26 @@ const styles = StyleSheet.create({
     color:'#808080',
     marginHorizontal: 15,
     // justifyContent:"space-between",
+  },
 
-  }
+  textContact:{
+    color:'#db7093',
+    fontSize:15,
+    padding:15
+  },
+   textContact2:{
+    color:'#008080',
+    fontSize:15,
+    marginHorizontal: 16,
+  },
+    email: {
+    color:'#4682b4',
+    padding:5,
+     alignItems:'flex-start',
+    justifyContent:"flex-start",
+    marginHorizontal: 15,
+  },
+  
+
 
 });
