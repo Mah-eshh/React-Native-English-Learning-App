@@ -33,7 +33,7 @@ export default class Login extends React.Component {
         )}
         <TextInput
         
-          style={styles.textInput}
+          style={styles.textIn}
           autoCapitalize="none"
           placeholder="Email"
           onChangeText={email => this.setState({ email })}
@@ -41,7 +41,7 @@ export default class Login extends React.Component {
         />
         <TextInput
           secureTextEntry
-          style={styles.textInput}
+          style={styles.textIn}
           autoCapitalize="none"
           placeholder="Password"
           onChangeText={password => this.setState({ password })}
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     
   },
-  textInput: {
+  textIn: {
     height: 45,
     width: "85%",
     borderColor: "gray",

@@ -49,11 +49,7 @@ export function DrawerContent(props) {
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <Icon 
-                                name="format-text" 
-                                color={color}
-                                size={30}
-                                /> 
+                               <MaterialCommunityIcons name="book-open-page-variant" size={30} color="black" />
                             )}
                             label="Basics of Tenses"
                             onPress={() => {props.navigation.navigate('TensesScreen')}}
