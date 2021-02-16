@@ -23,7 +23,7 @@ export function DrawerContent(props) {
                                 size={70}/>
                             <View style={{marginLeft:15, flexDirection:'column'}}>
                                 <Title style={styles.title}>Smart English App</Title>
-                                <Caption style={styles.cap}>@created by -maheSh</Caption>
+                                <Caption style={styles.cap}>                  @maheSh</Caption>
                             </View>
                         </View>
 
