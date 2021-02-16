@@ -49,19 +49,19 @@ export function DrawerContent(props) {
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
+                             <MaterialCommunityIcons name="human-handsup" size={30} color="black" />
+                            )}
+                            label="Become Fluent"
+                            onPress={() => {props.navigation.navigate('MaheshScreen')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
                                <MaterialCommunityIcons name="book-open-page-variant" size={30} color="black" />
                             )}
-                            label="Basics of Tenses"
+                            label="12 Types of Tenses"
                             onPress={() => {props.navigation.navigate('TensesScreen')}}
                         />
                     
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                              <Entypo name="book" size={30} color="black" />
-                            )}
-                            label="Become Fluent in English"
-                            onPress={() => {props.navigation.navigate('MaheshScreen')}}
-                        />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <AntDesign name="dribbble-square" size={30} color="black" />
