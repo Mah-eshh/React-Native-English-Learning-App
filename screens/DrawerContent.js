@@ -27,13 +27,7 @@ export function DrawerContent(props) {
                             </View>
                         </View>
 
-                        <View style={styles.row}>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.cap}>Following</Caption>
-                            </View>
-                           
-                        </View>
+                      
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
