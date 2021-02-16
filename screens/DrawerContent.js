@@ -15,17 +15,22 @@ export function DrawerContent(props) {
         <View style={{flex:1}}>
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
-                    <View style={styles.userInfoSection}>
+                    <View style={styles.userInfo}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
                             
                                 source={require('../assets/myLog.png')}
                                 size={70}/>
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>Smart English App</Title>
-                                <Caption style={styles.cap}>                  @maheSh</Caption>
+                                <Title style={styles.mytitle}>Smart English App</Title>
+                                <Caption style={styles.mcap}>                  @maheSh</Caption>
                             </View>
                         </View>    
+
+                         <View style={styles.mysection}>
+                                
+                                <Caption style={styles.mcap}>                                __________________________________</Caption>
+                            </View>
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
@@ -53,19 +58,19 @@ export function DrawerContent(props) {
                     
                         <DrawerItem 
                             icon={({color, size}) => (
-                                <AntDesign name="dribbble-square" size={30} color="black" />
+                                <MaterialIcons name="menu-book" size={30} color="black" />
                                
                             )}
                             label="Basic English Phrases"
                             onPress={() => {props.navigation.navigate('PhrasesScreen')}}
                         />
-                          <DrawerItem 
+                          {/* <DrawerItem 
                             icon={({color, size}) => (
                             <MaterialCommunityIcons name="account-tie-voice" size={30} color="black" />
                             )}
                             label="Accurate Pronunciation"
                             onPress={() => {props.navigation.navigate('PronunScreen')}}
-                        />
+                        /> */}
                         
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -169,7 +174,7 @@ export function DrawerContent(props) {
 
                 </View>
             </DrawerContentScrollView>
-            <Drawer.Section style={styles.bottomDrawerSection}>
+            <Drawer.Section style={styles.DrawerSection}>
                 <DrawerItem 
                     icon={({color, size}) => (
                         <Entypo name="log-out" size={30} color="black" />
@@ -187,36 +192,33 @@ const styles = StyleSheet.create({
       backgroundColor:'#f0f8ff',
 
     },
-    userInfoSection: {
+    userInfo: {
       paddingLeft: 18,
     },
-    title: {
+    mytitle: {
       fontSize: 15,
       marginTop: 3,
       fontWeight: 'bold',
     },
-    cap: {
+    mcap: {
       fontSize: 14,
       lineHeight: 14,
     },
-    row: {
+    mrow: {
       marginTop: 20,
       flexDirection: 'row',
       alignItems: 'center',
     },
-    section: {
+    mysection: {
       flexDirection: 'row',
       alignItems: 'center',
       marginRight: 15,
     },
-    paragraph: {
+    myparagraph: {
       fontWeight: 'bold',
       marginRight: 3,
     },
-    drawerSection: {
-      marginTop: 10,
-    },
-    bottomDrawerSection: {
+    mydrawerSection: {
         marginBottom: 0,
         borderTopColor: '#f4f4f4',
         borderTopWidth: 2,
