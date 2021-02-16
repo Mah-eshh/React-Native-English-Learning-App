@@ -26,6 +26,11 @@ export function DrawerContent(props) {
                                 <Caption style={styles.cap}>                  @maheSh</Caption>
                             </View>
                         </View>    
+
+                         <View style={styles.section}>
+                                
+                                <Caption style={styles.cap}>                                __________________________________</Caption>
+                            </View>
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
