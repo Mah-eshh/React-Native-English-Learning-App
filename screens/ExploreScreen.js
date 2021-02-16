@@ -7,7 +7,7 @@ const ExploreScreen = () => {
         <Text>This is ExploreScreen and not initial yet</Text>
         <Button
           title="Click Here"
-          onPress={() => alert('Button Clicked!')}
+          onPress={() => alert('Button Clicked!zy')}
         />
       </View>
     );

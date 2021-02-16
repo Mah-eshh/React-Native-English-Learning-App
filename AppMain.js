@@ -20,7 +20,7 @@ import SpeakingPractice from './timer/SpeakingPractice';
 import WebBrowserScreen from './drawer/web/WebBrowserScreen';
 import PDFScreen from './drawer/web/PDFScreen';
 import AboutScreen from './screens/AboutScreen';
-
+// import ExploreScreen from './screens/ExploreScreen';
 
 import * as firebase from "firebase";
 const Drawer = createDrawerNavigator();
@@ -50,6 +50,7 @@ const AppMain = () => {
              <Drawer.Screen name="WebBrowserScreen" component={WebBrowserScreen}/>
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
               <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
+              {/* <Drawer.Screen name="ExploreScreen" component={ExploreScreen}/> */}
 
               
 
