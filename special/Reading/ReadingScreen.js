@@ -5,7 +5,7 @@ const { width } = Dimensions.get('screen');
 import { EvilIcons } from '@expo/vector-icons';
 import { FlingGestureHandler, Directions, State, } from 'react-native-gesture-handler';
 
-const DATA = [
+const READING_DATA = [
   {
     title: 'Tenses',
   
@@ -61,17 +61,17 @@ const DATA = [
   },
 ];
 
-const OVERFLOW_HEIGHT = 70;
-const SPACING = 10;
-const ITEM_WIDTH = width * 0.76;
-const ITEM_HEIGHT = ITEM_WIDTH * 1.7;
-const VISIBLE_ITEMS = 3;
+const HEIGHT = 70;
+const SPACE = 10;
+const my_item_width = width * 0.76;
+const my_item_height = my_item_width * 1.7;
+const visible = 3;
 
 const Items = ({ data, scrollXAnimated }) => {
   const inputRange = [-1, 0, 1];
   const translateY = scrollXAnimated.interpolate({
     inputRange,
-    outputRange: [OVERFLOW_HEIGHT, 0, -OVERFLOW_HEIGHT],
+    outputRange: [HEIGHT, 0, -HEIGHT],
   });
   return (
     <View style={styles.overflowContainer}>
@@ -93,7 +93,7 @@ const Items = ({ data, scrollXAnimated }) => {
 };
 
 export default function ReadingScreen() {
-  const [data, setData] = React.useState(DATA);
+  const [data, setData] = React.useState(READING_DATA);
   const scrollXIndex = React.useRef(new Animated.Value(0)).current;
   const scrollXAnimated = React.useRef(new Animated.Value(0)).current;
   const [index, setIndex] = React.useState(0);
@@ -103,9 +103,8 @@ export default function ReadingScreen() {
   });
 
   React.useEffect(() => {
-    if (index === data.length - VISIBLE_ITEMS - 1) {
-      // get new data
-      // fetch more data
+    if (index === data.length - visible - 1) {
+      
       const newData = [...data, ...data];
       setData(newData);
     }
@@ -154,7 +153,7 @@ export default function ReadingScreen() {
             contentContainerStyle={{
               flex: 1,
               justifyContent: 'center',
-              padding: SPACING * 2,
+              padding: SPACE * 2,
               marginTop: 50,
             }}
             scrollEnabled={false}
@@ -166,9 +165,9 @@ export default function ReadingScreen() {
               style,
               ...props
             }) => {
-              const newStyle = [style, { zIndex: data.length - index }];
+              const newSt = [style, { zIndex: data.length - index }];
               return (
-                <View style={newStyle} index={index} {...props}>
+                <View style={newSt} index={index} {...props}>
                   {children}
                 </View>
               );
@@ -185,14 +184,14 @@ export default function ReadingScreen() {
               });
               const opacity = scrollXAnimated.interpolate({
                 inputRange,
-                outputRange: [1 - 1 / VISIBLE_ITEMS, 1, 0],
+                outputRange: [1 - 1 / visible, 1, 0],
               });
 
               return (
                 <Animated.View
                   style={{
                     position: 'absolute',
-                    left: -ITEM_WIDTH / 2,
+                    left: -my_item_width / 2,
                     opacity,
                     transform: [
                       {
@@ -205,8 +204,8 @@ export default function ReadingScreen() {
                   <Image
                     source={{ uri: item.poster }}
                     style={{
-                      width: ITEM_WIDTH,
-                      height: ITEM_HEIGHT,
+                      width: my_item_width,
+                      height: my_item_height,
                       borderRadius: 14,
                     }}
                   />
@@ -234,12 +233,12 @@ const styles = StyleSheet.create({
   },
 
   itemContainer: {
-    height: OVERFLOW_HEIGHT,
-    padding: SPACING * 2,
+    height: HEIGHT,
+    padding: SPACE * 2,
   },
  
   overflowContainer: {
-    height: OVERFLOW_HEIGHT,
+    height: HEIGHT,
     overflow: 'hidden',
    
   },
