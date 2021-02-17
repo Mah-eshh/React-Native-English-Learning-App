@@ -14,7 +14,7 @@ export function DrawerContent(props) {
     return(
         <View style={{flex:1}}>
             <DrawerContentScrollView {...props}>
-                <View style={styles.drawerContent}>
+                <View style={styles.mydrawerContent}>
                     <View style={styles.userInfo}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
@@ -22,7 +22,7 @@ export function DrawerContent(props) {
                                 source={require('../assets/myLog.png')}
                                 size={70}/>
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.mytitle}>Smart English App</Title>
+                                <Title style={styles.mytitle}>Smart English App 🔷</Title>
                                 <Caption style={styles.mcap}>                  @maheSh</Caption>
                             </View>
                         </View>    
@@ -33,7 +33,7 @@ export function DrawerContent(props) {
                             </View>
                     </View>
 
-                    <Drawer.Section style={styles.drawerSection}>
+                    <Drawer.Section style={styles.mydrawerSection}>
                         <DrawerItem 
                             icon={({color, size}) => (
                                <Ionicons name="home" size={30} color="black" />
@@ -174,10 +174,10 @@ export function DrawerContent(props) {
 
                 </View>
             </DrawerContentScrollView>
-            <Drawer.Section style={styles.DrawerSection}>
+            <Drawer.Section style={styles.signOut}>
                 <DrawerItem 
                     icon={({color, size}) => (
-                        <Entypo name="log-out" size={30} color="black" />
+                        <Entypo name="log-out" size={30} color="#ff69b4" />
                     )}
                     label="Sign Out"
                    onPress={() => firebase.auth().signOut()}   
@@ -187,7 +187,7 @@ export function DrawerContent(props) {
     );
 }
 const styles = StyleSheet.create({
-    drawerContent: {
+    mydrawerContent: {
       flex: 1,
       backgroundColor:'#f0f8ff',
 
@@ -220,10 +220,13 @@ const styles = StyleSheet.create({
     },
     mydrawerSection: {
         marginBottom: 0,
-        borderTopColor: '#f4f4f4',
-        borderTopWidth: 2,
+        backgroundColor: '#f0f8ff'
+    },
+    signOut: {
+        marginBottom: 0,
         backgroundColor: '#87cefa'
     },
+
     // preference: {
     //   flexDirection: 'row',
     //   justifyContent: 'space-between',
