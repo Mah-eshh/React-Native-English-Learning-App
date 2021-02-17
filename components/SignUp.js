@@ -30,7 +30,6 @@ export default class SignUp extends React.Component {
           <Text style={{ color: "red" }}>{this.state.errorMessage}</Text>
         )}
         <TextInput
-        // style={{ marginTop: 40, borderBottomColor: '#ddd', borderBottomWidth: 1, paddingBottom: 20 }}
           placeholder="Email"
           autoCapitalize="none"
           style={styles.textInput}

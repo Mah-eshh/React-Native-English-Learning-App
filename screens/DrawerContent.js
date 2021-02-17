@@ -32,7 +32,7 @@ export function DrawerContent(props) {
                     <Drawer.Section style={styles.mydrawerSection}>
                         <DrawerItem 
                             icon={({color, size}) => (
-                               <Ionicons name="home" size={30} color="black" />
+                               <Ionicons name="home" size={30} color="#00bfff" />
                             )}
                             label="Home"
                             onPress={() => {props.navigation.navigate('Home')}}
@@ -112,7 +112,7 @@ export function DrawerContent(props) {
                         />
                           <DrawerItem 
                             icon={({color, size}) => (
-                                <MaterialCommunityIcons name="file-pdf-box" size={30} color="#ff0000" />
+                                <MaterialCommunityIcons name="file-pdf-box" size={30} color="#ff0022" />
                             )}
                             label="PDF Files "
                             onPress={() => {props.navigation.navigate('PDFScreen')}}
@@ -126,7 +126,7 @@ export function DrawerContent(props) {
                         />
                           <DrawerItem 
                             icon={({color, size}) => (
-                                <FontAwesome5 name="medium" size={30} color="black" />
+                                <FontAwesome5 name="medium" size={30} color="#b0c4de" />
                             )}
                             label="About us"
                             onPress={() => {props.navigation.navigate('AboutScreen')}}
@@ -138,7 +138,7 @@ export function DrawerContent(props) {
             <Drawer.Section style={styles.signOut}>
                 <DrawerItem 
                     icon={({color, size}) => (
-                        <Entypo name="log-out" size={30} color="#ff69b4" />
+                        <Entypo name="log-out" size={30} color="#191970" />
                     )}
                     label="Sign Out"
                    onPress={() => firebase.auth().signOut()}   
@@ -187,12 +187,5 @@ const styles = StyleSheet.create({
         marginBottom: 0,
         backgroundColor: '#87cefa'
     },
-
-    // preference: {
-    //   flexDirection: 'row',
-    //   justifyContent: 'space-between',
-    //   paddingVertical: 12,
-    //   paddingHorizontal: 16,
-    // },
   });
   
