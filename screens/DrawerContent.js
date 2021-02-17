@@ -135,7 +135,7 @@ export function DrawerContent(props) {
                               <Entypo name="globe" size={30} color="black" />
                             )}
                             label="Browse Me "
-                            onPress={() => {props.navigation.navigate('WebBrowseScreen')}}
+                            onPress={() => {props.navigation.navigate('WebBrowserScreen')}}
                         />
                           <DrawerItem 
                             icon={({color, size}) => (
