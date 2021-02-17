@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     marginHorizontal: 16,
     justifyContent:"space-between",
-    // alignItems:'flex-start'
   }, 
   Feature:{
     color:'#48d1cc',
@@ -72,9 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color:'#808080',
     marginHorizontal: 15,
-    // justifyContent:"space-between",
   },
-
   textContact:{
     color:'#db7093',
     fontSize:15,
@@ -92,7 +89,4 @@ const styles = StyleSheet.create({
     justifyContent:"flex-start",
     marginHorizontal: 15,
   },
-  
-
-
 });

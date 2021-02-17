@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Linking, View, StyleSheet } from 'react-native';
+import { Button, Linking, View, StyleSheet, Text } from 'react-native';
 import * as WebBrowser from 'expo-web-browser';
 import Constants from 'expo-constants';
 import { FontAwesome } from '@expo/vector-icons';
@@ -7,6 +7,7 @@ export default class WebBrowserScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
+      <Text style={styles.app}> Essential Websites </Text>
        <FontAwesome.Button name="youtube" 
           onPress={this.YouTube} style={{ width: 220, backgroundColor: '#ff0000', alignItems: 'center', justifyContent: 'center' }}>
             Youtube</FontAwesome.Button> 
@@ -76,4 +77,12 @@ const styles = StyleSheet.create({
   button: {
     marginVertical: 10,
   },
+      app:{
+    color:'#191970',
+    fontSize: 18,
+    padding:10,
+    alignItems:'flex-start',
+    justifyContent:"flex-start",
+    marginHorizontal: 15,
+      },
 });

@@ -23,7 +23,6 @@ const imageHi = imageWidth * 1.65;
 
 export default () => {
     const scroll = React.useRef(new Animated.Value(0)).current;
-
     return (
         <View style={{ flex: 1, backgroundColor: '#000' }}>
             <StatusBar hidden />

@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { StatusBar, Image, FlatList, Dimensions, Animated, Text, View, StyleSheet, SafeAreaView, } from 'react-native';
 const { width } = Dimensions.get('screen');
@@ -6,7 +5,6 @@ import { EvilIcons } from '@expo/vector-icons';
 import { FlingGestureHandler, Directions, State, } from 'react-native-gesture-handler';
 
 const READING_DATA = [
- 
   {
     title: 'Tenses',
   
@@ -80,7 +78,6 @@ const READING_DATA = [
   },
   
 ];
-
 const HEIGHT = 55;
 const SPACE = 10;
 const my_item_width = width * 0.76;
@@ -110,7 +107,6 @@ const Items = ({ data, scrollXAnimated }) => {
     </View>
   );
 };
-
 export default function ReadingScreen() {
   const [data, setData] = React.useState(READING_DATA);
   const scrollXIndex = React.useRef(new Animated.Value(0)).current;
@@ -120,7 +116,6 @@ export default function ReadingScreen() {
     scrollXIndex.setValue(activeIndex);
     setIndex(activeIndex);
   });
-
   React.useEffect(() => {
     if (index === data.length - visible - 1) {
       
@@ -147,8 +142,7 @@ export default function ReadingScreen() {
           }
           setActiveIndex(index + 1);
         }
-      }}
-    >
+      }}>
       <FlingGestureHandler
         key='right'
         direction={Directions.RIGHT}
@@ -159,8 +153,7 @@ export default function ReadingScreen() {
             }
             setActiveIndex(index - 1);
           }
-        }}
-      >
+        }}>
         <SafeAreaView style={styles.container}>
           <StatusBar hidden />
           <Items data={data} scrollXAnimated={scrollXAnimated} />
@@ -218,8 +211,7 @@ export default function ReadingScreen() {
                       },
                       { scale },
                     ],
-                  }}
-                >
+                  }}>
                   <Image
                     source={{ uri: item.poster }}
                     style={{
@@ -237,7 +229,6 @@ export default function ReadingScreen() {
     </FlingGestureHandler>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -2,8 +2,8 @@ import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
-import HomeScreen from '../home/HomeScreen';
 
+import HomeScreen from '../home/HomeScreen';
 import ReadingScreen from '../special/Reading/ReadingScreen';
 import ListeningScreen from '../drawer/listing/ListeningScreen';
 import WritingScreen from '../drawer/notepad/WritingScreen';
@@ -20,8 +20,7 @@ const Tab = createMaterialBottomTabNavigator();
 const MainTab = () => (
     <Tab.Navigator
       initialRouteName="Home"
-      activeColor="#fff"
-    >
+      activeColor="#fff">
       <Tab.Screen
         name="Home"
         component={HomeStackScreen}
@@ -78,12 +77,10 @@ const MainTab = () => (
         }}
       />
     
-    </Tab.Navigator>
-    
+    </Tab.Navigator>  
 );
 
 export default MainTab;
-
 const HomeStackScreen = ({navigation}) => (
 <HomeStack.Navigator screenOptions={{
         headerStyle: {
@@ -102,7 +99,6 @@ const HomeStackScreen = ({navigation}) => (
         }} />
 </HomeStack.Navigator>
 );
-
 
 const ListeningStackScreen = ({navigation}) => (
 <ListeningStack.Navigator screenOptions={{
@@ -178,7 +174,6 @@ const SpeakingStackPractice = ({navigation}) => (
         )
         }} />
 </SpeakingStack.Navigator>
-
 );
 
 
