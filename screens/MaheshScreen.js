@@ -93,7 +93,7 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
                     scale: myanimatedValue.interpolate({
                       inputRange: [0, 0.05, 0.5, 1],
                       outputRange: [1, 0, 0, 1],
-                      // extrapolate: "clamp"
+                     
                     }),
                   },
                   {
