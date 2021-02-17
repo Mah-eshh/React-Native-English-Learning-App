@@ -4,7 +4,7 @@
     "slug": "myApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/myUp.jpg",
+    "icon": "./assets/myLog1.png",
     "splash": {
       "image": "./assets/myLog.png",
       "resizeMode": "contain",
