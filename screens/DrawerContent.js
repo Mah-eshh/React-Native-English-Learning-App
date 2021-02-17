@@ -8,9 +8,7 @@ import { Entypo,MaterialCommunityIcons, FontAwesome, FontAwesome5, AntDesign, Ma
 import * as firebase from "firebase";
 
 export function DrawerContent(props) {
-    const [isDarkTheme, setIsDarkTheme ] = React.useState(false);
-    const toggleTheme = () => {
-        setIsDarkTheme(!isDarkTheme); }
+ 
     return(
         <View style={{flex:1}}>
             <DrawerContentScrollView {...props}>
@@ -26,13 +24,11 @@ export function DrawerContent(props) {
                                 <Caption style={styles.mcap}>                  @maheSh</Caption>
                             </View>
                         </View>    
-
                          <View style={styles.mysection}>
                                 
                                 <Caption style={styles.mcap}>                                __________________________________</Caption>
                             </View>
                     </View>
-
                     <Drawer.Section style={styles.mydrawerSection}>
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -64,14 +60,6 @@ export function DrawerContent(props) {
                             label="Basic English Phrases"
                             onPress={() => {props.navigation.navigate('PhrasesScreen')}}
                         />
-                          {/* <DrawerItem 
-                            icon={({color, size}) => (
-                            <MaterialCommunityIcons name="account-tie-voice" size={30} color="black" />
-                            )}
-                            label="Accurate Pronunciation"
-                            onPress={() => {props.navigation.navigate('PronunScreen')}}
-                        /> */}
-                        
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <MaterialIcons name="import-contacts" size={30} color="black" />
@@ -79,11 +67,9 @@ export function DrawerContent(props) {
                             label="Improve Vocabulary"
                             onPress={() => {props.navigation.navigate('VocabularyScreen')}}
                         />
-                      
                         <DrawerItem 
                             icon={({color, size}) => (
                              <Entypo name="music" size={30} color="black" />
-                            
                             )}
                             label="English Songs"
                             onPress={() => {props.navigation.navigate('MusicsScreen')}}
@@ -103,7 +89,6 @@ export function DrawerContent(props) {
                             label="Reading Practice"
                             onPress={() => {props.navigation.navigate('ReadingScreen')}}
                         />
-                       
                         <DrawerItem 
                             icon={({color, size}) => (
                            <FontAwesome name="pencil-square-o" size={30} color="black" />
@@ -118,18 +103,6 @@ export function DrawerContent(props) {
                             label="Speak with yourself "
                             onPress={() => {props.navigation.navigate('SpeakingPractice')}}
                         />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="share-outline" 
-                                color={"pink"}
-                                size={size}
-                                />
-                            )}
-                            label="Share this."
-                            onPress={() => {props.navigation.navigate('myShare')}}
-                        />
-                        
                             <DrawerItem 
                             icon={({color, size}) => (
                               <Entypo name="globe" size={30} color="black" />
@@ -160,18 +133,6 @@ export function DrawerContent(props) {
                         />
 
                     </Drawer.Section>
-
-                    {/* <Drawer.Section title="Preferences">
-                        <TouchableRipple onPress={() => {toggleTheme()}}>
-                            <View style={styles.preference}>
-                                <Text>Dark Theme</Text>
-                                <View pointerEvents="none">
-                                    <Switch value={isDarkTheme}/>
-                                </View>
-                            </View>
-                        </TouchableRipple>
-                    </Drawer.Section> */}
-
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.signOut}>

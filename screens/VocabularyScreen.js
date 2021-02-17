@@ -14,24 +14,20 @@ const data = [
     'https://lessonsforenglish.com/wp-content/uploads/2019/12/Silent-Letters-List.png',
     'https://lessonsforenglish.com/wp-content/uploads/2019/12/Homonym-Words.png',
     'https://lessonsforenglish.com/wp-content/uploads/2020/06/360-Synonyms-Words-List-in-English.png',
-    
     'https://lessonsforenglish.com/wp-content/uploads/2020/04/Irregular-Plurals-Singular-and-Plural.png',
     'https://lessonsforenglish.com/wp-content/uploads/2020/05/160-Synonym-Words-List-in-English.png',
 ];
  
-
 const imageWidth = width * 0.8;
 const imageHi = imageWidth * 1.65;
 
 export default () => {
     const scroll = React.useRef(new Animated.Value(0)).current;
-
     return (
         <View style={{ flex: 1, backgroundColor: '#000' }}>
             <StatusBar hidden />
             <View
-                style={StyleSheet.absoluteFillObject}
-            >
+                style={StyleSheet.absoluteFillObject}>
                 { data.map((image, index) => {
                     const inputRange = [
                         (index - 1 ) * width,
@@ -51,8 +47,7 @@ export default () => {
                             opacity
                         }
                     ]}
-                    blurRadius={50}
-                    />
+                    blurRadius={50}/>   
                 })}
             </View>
             <Animated.FlatList 
@@ -81,10 +76,8 @@ export default () => {
                             borderRadius:16
                         }}/>
                     </View>
-                }}  
-                />   
+                }} /> 
+                 
         </View>
-
-
     );
 };

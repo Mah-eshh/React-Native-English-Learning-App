@@ -7,6 +7,7 @@ export default class PDFScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
+<Text style={styles.app}> Free Download English PDF </Text>
    
        <TouchableOpacity 
          onPress={this._handleOpenWithWebBrowser}
@@ -76,10 +77,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#123458',
+    backgroundColor: '#191970',
   },
   button: {
     marginVertical: 10,
+  },
+    app:{
+    color:'#778899',
+    fontSize: 18,
+    padding:10,
+    alignItems:'flex-start',
+    justifyContent:"flex-start",
+    marginHorizontal: 15,
   },
   
 });

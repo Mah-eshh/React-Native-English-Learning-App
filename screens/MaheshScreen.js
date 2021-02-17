@@ -16,23 +16,18 @@ const myquotes = [
     quote: 'Challenge   Yourself to Learn  Difficult Words',
   },
   {
-    quote:
-      'Listen to English Audiobooks and Podcasts',
-    },
+    quote:'Listen to English Audiobooks and Podcasts',
+      },
   {
     quote: 'Watch a Long-Running Show, Preferably Without Subtitles',
-
   },
   {
-    quote:
-      "Read   News Websites and Journals",
+    quote:"Read   News Websites and Journals",
 },
   {
-    quote:
-      'Look  for  MOOCs     in Specialized Areas to Fine-tune Your Skills',
+    quote:'Look  for  MOOCs     in Specialized Areas to Fine-tune Your Skills',
 },
- 
-];
+ ];
 
 const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 }) => {
   const { initialBgColor, nextBgColor, bgColor } = colors[index];
@@ -65,8 +60,7 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
         StyleSheet.absoluteFillObject,
         styles.container,
         { backgroundColor },
-      ]}
-    >
+      ]}>
       <Animated.View
         style={[
           styles.circle,
@@ -80,7 +74,6 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
                   outputRange: ['0deg', '-90deg', '-180deg'],
                 }),
               },
-
               {
                 scale: myanimatedValue2.interpolate({
                   inputRange: [0, 0.5, 1],
@@ -89,8 +82,7 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
               },
             ],
           },
-        ]}
-      >
+        ]}>
         <TouchableOpacity onPress={onPress}>
           <Animated.View
             style={[
@@ -116,8 +108,7 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
                   outputRange: [1, 0, 0, 1],
                 }),
               },
-            ]}
-          >
+            ]}>
             <AnimAntDesign name='arrowright' size={35} color={'white'} />
           </Animated.View>
         </TouchableOpacity>
@@ -128,7 +119,7 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
 
 const colors = [
   {
-    initialBgColor: 'goldenrod',
+    initialBgColor: '#4169e1',
     bgColor: '#222',
     nextBgColor: '#178',
   },

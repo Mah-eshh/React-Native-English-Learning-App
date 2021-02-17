@@ -31,16 +31,10 @@ const AppMain = () => {
  
      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
         <Drawer.Screen name="HomeDrawer" component={MainTab} />
-        
          <Drawer.Screen name="TensesScreen" component={TensesScreen}/>
           <Drawer.Screen name="VocabularyScreen" component={VocabularyScreen}/>
           <Drawer.Screen name="PhrasesScreen" component={PhrasesScreen}/>
           <Drawer.Screen name="MaheshScreen" component={MaheshScreen} />
-
-         
-         
-      
-      
           <Drawer.Screen name="MusicsScreen" component={MusicsScreen} />
           <Drawer.Screen name="ListeningScreen" component={ListeningScreen}/>
           <Drawer.Screen name="ReadingScreen" component={ReadingScreen}/>
@@ -51,15 +45,11 @@ const AppMain = () => {
              <Drawer.Screen name="PDFScreen" component={PDFScreen}/>
               <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
               {/* <Drawer.Screen name="ExploreScreen" component={ExploreScreen}/> */}
-
-              
-
       </Drawer.Navigator>      
     </NavigationContainer>
 
   );
 };
-
 export default AppMain;
 
 
