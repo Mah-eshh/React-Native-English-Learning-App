@@ -9,7 +9,7 @@ export default function AboutScreen() {
           
       <Text style={styles.instructions} >
     Smart   English  learning  app  brings  together  all of  your  favourite  lessons and  presenters in  one fantastic, simple-to-use package. It's the best way to keep your English up to date!
-    You want to study  grammar, improve  your vocabulary,  develop  your English  through  topical  new stories or learn  the phrases  to u se  in your  everyday  conversations, our  app  has  the  series for you. 
+    You want to study  grammar, improve  your vocabulary,  develop  your English  through  topical  new stories or learn  the phrases  to  use  in your  everyday  conversations, our  app  has  the  series for you. 
     The best way  to learn a language to is to  practice a little bit  every day. Our  app helps you do that with daily updates of  amazing, fun and topical lessons,  Watch  your English grow !
       </Text>
 
@@ -36,7 +36,7 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f8ff',
     alignItems: 'center',
     justifyContent: 'center',
   },

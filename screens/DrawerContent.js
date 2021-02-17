@@ -45,7 +45,7 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                              <MaterialCommunityIcons name="human-handsup" size={30} color="black" />
                             )}
-                            label="Become Fluent"
+                            label="How to be Fluent ?"
                             onPress={() => {props.navigation.navigate('MaheshScreen')}}
                         />
                          <DrawerItem 
@@ -115,10 +115,10 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                               <Entypo name="time-slot" size={30} color="black" />
                             )}
-                            label="Speak with your self "
+                            label="Speak with yourself "
                             onPress={() => {props.navigation.navigate('SpeakingPractice')}}
                         />
-                        {/* <DrawerItem 
+                        <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
                                 name="share-outline" 
@@ -128,20 +128,20 @@ export function DrawerContent(props) {
                             )}
                             label="Share this."
                             onPress={() => {props.navigation.navigate('myShare')}}
-                        /> */}
+                        />
                         
                             <DrawerItem 
                             icon={({color, size}) => (
                               <Entypo name="globe" size={30} color="black" />
                             )}
-                            label="WebBrowserScreen "
-                            onPress={() => {props.navigation.navigate('WebBrowserScreen')}}
+                            label="Browse Me "
+                            onPress={() => {props.navigation.navigate('WebBrowseScreen')}}
                         />
                           <DrawerItem 
                             icon={({color, size}) => (
                                 <MaterialCommunityIcons name="file-pdf-box" size={30} color="#ff0000" />
                             )}
-                            label="Free PDF "
+                            label="PDF Files "
                             onPress={() => {props.navigation.navigate('PDFScreen')}}
                         />
                          <DrawerItem 

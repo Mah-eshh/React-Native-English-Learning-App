@@ -60,9 +60,9 @@ export default class Login extends React.Component {
           >
           <Text style={{ textAlign: 'center', color: '#0d47a1', fontSize: 15, padding:10, }}>Don't have an account? Create here </Text>
         </TouchableOpacity>
-         <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.props.navigation.navigate("google")}>
+         <FontAwesome.Button name="google" backgroundColor="#ff6347" onPress={() => this.props.navigation.navigate("googleLogScreen")}>
          Login with Google    </FontAwesome.Button>
-           <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebook")}>
+           <FontAwesome.Button name="facebook" backgroundColor="#03a9f4" onPress={() => this.props.navigation.navigate("facebookLogScreen")}>
          Login with Facebook </FontAwesome.Button>
 
 
