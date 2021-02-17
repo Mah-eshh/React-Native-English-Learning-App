@@ -128,7 +128,7 @@ const Circle = ({ onPress, index, myquotes, myanimatedValue, myanimatedValue2 })
 
 const colors = [
   {
-    initialBgColor: 'goldenrod',
+    initialBgColor: '#4169e1',
     bgColor: '#222',
     nextBgColor: '#178',
   },

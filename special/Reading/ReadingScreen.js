@@ -86,7 +86,6 @@ const SPACE = 10;
 const my_item_width = width * 0.76;
 const my_item_height = my_item_width * 1.7;
 const visible = 3;
-
 const Items = ({ data, scrollXAnimated }) => {
   const inputRange = [-1, 0, 1];
   const translateY = scrollXAnimated.interpolate({
@@ -259,8 +258,7 @@ const styles = StyleSheet.create({
  
   overflowContainer: {
     height: HEIGHT,
-    overflow: 'hidden',
-   
+    overflow: 'hidden', 
   },
 });
 

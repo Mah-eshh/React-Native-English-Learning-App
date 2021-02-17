@@ -9,7 +9,6 @@ export default class WritingScreen extends React.Component {
         noteArray: [],
         noteText: '',
     }
-
   render() {
 
       Let: notes = this.state.noteArray.map((val, key) => {
@@ -19,28 +18,22 @@ export default class WritingScreen extends React.Component {
       return (
 
         <View style={styles.container}>
-
             <View style={styles.header}>
-                <Text style={styles.headerT}>- MY NOTES -</Text>
+                <Text style={styles.headerT}> - MY NOTES - </Text>
+                <Text style={styles.headerT2}>  This is just like your writing book. But it has been created without saving any data(maheSh)</Text>
             </View>
-
             <ScrollView style={styles.scrollContainer}>
                 {notes}
             </ScrollView>
-
             <View style={styles.footerr}>
-
                 <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.Buttom}>
                     <Text style={styles.ButtomText}>+</Text>
                 </TouchableOpacity>
-
                 <TextInput style={styles.textInput}
                   onChangeText={(noteText) => this.setState({noteText})} value={this.state.noteText}
                   placeholder='> Write here' placeholderTextColor='#f0f8ff' underlineColor='transparent'>
                 </TextInput>
-
             </View>
-
         </View>
       );
     }
@@ -77,6 +70,13 @@ const styles = StyleSheet.create({
     color: '#010b65',
     fontSize: 18,
     padding: 26,
+  },
+   headerT2:{
+    color: '#191970',
+    fontSize: 8,
+    justifyContent:'flex-start',
+    alignItems:'flex-start'
+    
   },
   scrollContainer:{
     flex: 1,

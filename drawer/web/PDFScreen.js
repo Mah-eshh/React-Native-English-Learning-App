@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: '#123458',
+    backgroundColor: '#191970',
   },
   button: {
     marginVertical: 10,
