@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button, Image, TouchableOpacity } from 'react-n
 import firebase from 'firebase';
 import * as Google from 'expo-google-app-auth'; //import
 import { FontAwesome } from '@expo/vector-icons';
-class google extends Component {
+class googleLogScreen extends Component {
 
   isUserEqual = (googleUser, firebaseUser) => {
     if (firebaseUser) {
@@ -126,7 +126,7 @@ class google extends Component {
     );
   }
 }
-export default google;
+export default googleLogScreen;
 
 const styles = StyleSheet.create({
   container: {

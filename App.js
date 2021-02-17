@@ -21,8 +21,8 @@ import Loading from "./components/Loading";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import AppMain from "./AppMain";
-import google from "./components/google"; 
-import facebook from './components/facebook';
+import googleLogScreen from "./components/googleLogScreen"; 
+import facebookLogScreen from './components/facebookLogScreen';
 
 // create our app's navigation stack
 const RootStack = createSwitchNavigator(
@@ -31,9 +31,9 @@ const RootStack = createSwitchNavigator(
     Login: Login,
     SignUp: SignUp,
     AppMain: AppMain,
-    google: google,
+    googleLogScreen: googleLogScreen,
 
-    facebook:facebook
+    facebookLogScreen:facebookLogScreen
   },
   {
     initialRouteName: "Loading"

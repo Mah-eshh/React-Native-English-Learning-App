@@ -2,7 +2,7 @@ import React from 'react';
 import { Alert, StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native';
 import * as Facebook from 'expo-facebook';
 
-export default function facebook() {
+export default function facebookLogScreen() {
 
 async function logInFB() {
   try {
