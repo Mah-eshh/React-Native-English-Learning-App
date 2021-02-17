@@ -89,7 +89,7 @@ const HomeStackScreen = ({navigation}) => (
         headerStyle: {
         backgroundColor: '#0096ff',
         },
-        headerTintColor: '#faebd7',
+        headerTintColor: '#fff',
         headerTitleStyle: {
         fontWeight: 'bold'
         }
