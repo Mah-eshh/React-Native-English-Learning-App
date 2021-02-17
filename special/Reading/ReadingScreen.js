@@ -6,6 +6,7 @@ import { EvilIcons } from '@expo/vector-icons';
 import { FlingGestureHandler, Directions, State, } from 'react-native-gesture-handler';
 
 const READING_DATA = [
+ 
   {
     title: 'Tenses',
   
@@ -21,7 +22,12 @@ const READING_DATA = [
 
     poster: 'https://englishgrammarhere.com/wp-content/uploads/2019/07/Internet-Abbreviations-1.png',
   },
-
+  
+ {
+    title: 'Abbreviations 2',
+  
+    poster: 'https://lessonsforenglish.com/wp-content/uploads/2019/12/Instagram-Abbreviations.png',
+  },
 
  {
     title: 'Prepositions',
@@ -35,6 +41,11 @@ const READING_DATA = [
     poster: 'https://englishgrammarhere.com/wp-content/uploads/2020/09/Prepositional-Phrases-List-and-Examples.png',
   },
 
+  {
+    title: 'Time Expressions',
+
+    poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/11/17-Time-Expressions-Words-and-Example-Sentences.png',
+  },
   {
     title: 'Articles A & An',
 
@@ -59,9 +70,18 @@ const READING_DATA = [
     title: "Using 'Time'",
     poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/06/Collocations-with-TIME-and-Example-Sentences.png',
   },
+     {
+    title: "Using 'Until'",
+    poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/05/Uses-Until-Definition-and-6-Example-Sentences.png',
+  },
+   {
+    title: "Little and Few",
+    poster: 'https://lessonsforenglish.com/wp-content/uploads/2020/06/Uses-A-little-Little-A-few-Few-Definition-and-Example-Sentences.png',
+  },
+  
 ];
 
-const HEIGHT = 70;
+const HEIGHT = 55;
 const SPACE = 10;
 const my_item_width = width * 0.76;
 const my_item_height = my_item_width * 1.7;

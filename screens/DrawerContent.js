@@ -77,7 +77,7 @@ export function DrawerContent(props) {
                                 <MaterialIcons name="import-contacts" size={30} color="black" />
                             )}
                             label="Improve Vocabulary"
-                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                            onPress={() => {props.navigation.navigate('VocabularyScreen')}}
                         />
                       
                         <DrawerItem 

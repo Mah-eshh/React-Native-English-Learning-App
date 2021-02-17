@@ -5,7 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DrawerContent } from './screens/DrawerContent';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import MainTab from './screens/MainTab'; 
-import SupportScreen from './screens/SupportScreen';
+import VocabularyScreen from './screens/VocabularyScreen';
 
 import MusicsScreen from './screens/MusicsScreen';
 
@@ -33,7 +33,7 @@ const AppMain = () => {
         <Drawer.Screen name="HomeDrawer" component={MainTab} />
         
          <Drawer.Screen name="TensesScreen" component={TensesScreen}/>
-          <Drawer.Screen name="SupportScreen" component={SupportScreen}/>
+          <Drawer.Screen name="VocabularyScreen" component={VocabularyScreen}/>
           <Drawer.Screen name="PhrasesScreen" component={PhrasesScreen}/>
           <Drawer.Screen name="MaheshScreen" component={MaheshScreen} />
 
