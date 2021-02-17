@@ -11,18 +11,26 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <StatusBar hidden/>
         <TextAnimator 
-          content="Your are welcome to smart English App " 
-          textStyle={styles.textStyle}
-          style={styles.containerStyle}
-          timing={500}
-          onFinish={ this._onFinish }
+          content="Smart English App " 
+          textStyle={styles.textStyle1}
+          style={styles.containerStyle1}
+          timing={3000}
+          onFinish={ this.Finish1}
         />
          <TextAnimator 
-          content="maheSH" 
-          textStyle={styles.textStyle}
-          style={styles.containerStyle}
-          timing={6000}
-          onFinish={ this._onFinish }
+          content="Study everyday" 
+          textStyle={styles.textStyle2}
+          style={styles.containerStyle2}
+          timing={1000}
+          onFinish={ this.Finish2}
+          
+        />
+        <TextAnimator 
+          content="created by maheSh" 
+          textStyle={styles.textStyle3}
+          style={styles.containerStyle3}
+          timing={2000}
+          onFinish={ this.Finish3}
           
         />
       </View>
@@ -34,16 +42,32 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 2,
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#87ceeb',
     padding: 8,
     
   },
-  containerStyle: {},
+  containerStyle1: {},
   textStyle: {
     fontSize: 40,
     color: '#191970', 
     marginBottom: 14
+  },
+   textStyle1: {
+    fontSize: 45,
+    color: '#008080', 
+    marginBottom: 5
+  },
+   textStyle2: {
+    fontSize: 25,
+    color: '#696969', 
+    marginBottom: 5,
+    padding:5
+  },
+     textStyle3: {
+    fontSize: 20,
+    color: '#4682b4', 
+   
   },
 });
